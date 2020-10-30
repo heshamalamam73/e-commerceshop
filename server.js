@@ -13,9 +13,6 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/", (req, res) => {
-  res.send("api works good");
-});
 mongoose
   .connect(mongodbUrl, {
     useNewUrlParser: true,
@@ -29,7 +26,7 @@ app.use("/api/users", userRoute);
 app.use("/api/products", producRoute);
 
 if (process.env.NODE_ENV) {
-  app.use(express.static("front-end/build"));
+  app.use(express.static("client/build"));
 }
 
 const port = process.env.PORT || 3000;
