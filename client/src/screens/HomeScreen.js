@@ -38,8 +38,6 @@ function HomeScreen(props) {
     <div>Error...</div>
   ) : (
     <div className="home-page">
-      <UpNav />
-
       <div className="home-right">
         <div className="nav-left">
           <LeftNav />

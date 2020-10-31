@@ -1,34 +1,55 @@
-import React from "react";
 import { Link } from "react-router-dom";
-
+import React, { useEffect, useState } from "react";
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from "reactstrap";
 function Header(props) {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   const { userInfo } = props;
   return (
-    <header className="header">
-      <div className="nav-list">
-        <div className="brand">
-          {/* <button onClick={openMenu}>&#9776;</button> */}
-          <Link to="/">Let's Shopping</Link>
-        </div>
-        <ul className="nav-list-items">
-          <li className="nav-list-item">
+    <div>
+      <Navbar color="dark" dark expand="md">
+        <NavbarBrand href="/">Let's Shopping</NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink href="/">Home</NavLink>
+            </NavItem>
             {userInfo ? (
-              <Link to="/profile"> {userInfo.name}</Link>
+              <NavItem>
+                <NavLink href="/profile"> {userInfo.name}</NavLink>
+              </NavItem>
             ) : (
-              <Link to="/signin">Sign in</Link>
+              <NavItem>
+                <NavLink href="/signin">Sign in</NavLink>
+              </NavItem>
             )}
-          </li>
-          {userInfo ? (
-            <li className="nav-list-item">
-              {userInfo.isAdmin && <Link to="/products"> Admin</Link>}
-            </li>
-          ) : null}
-          <li className="nav-list-item">
-            <Link to="/cart">Cart</Link>
-          </li>
-        </ul>
-      </div>
-    </header>
+            {userInfo ? (
+              <li className="">
+                <NavItem>
+                  <NavLink href="/products">Admin</NavLink>
+                </NavItem>
+              </li>
+            ) : null}
+          </Nav>
+        </Collapse>
+      </Navbar>
+    </div>
   );
 }
 export default Header;
