@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 app.use(bodyParser.json());
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
 mongoose
   .connect(mongodbUrl, {
@@ -28,7 +28,7 @@ app.use("/api/products", producRoute);
 if (process.env.NODE_ENV) {
   app.use(express.static("client/build"));
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client/build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
 
