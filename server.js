@@ -27,6 +27,9 @@ app.use("/api/products", producRoute);
 
 if (process.env.NODE_ENV) {
   app.use(express.static("client/build"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "build", "index.html"));
+  });
 }
 
 const port = process.env.PORT || 3000;

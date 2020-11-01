@@ -39,9 +39,7 @@ function HomeScreen(props) {
   ) : (
     <div className="home-page">
       <div className="home-right">
-        <div className="nav-left">
-          <LeftNav />
-        </div>
+        <div className="nav-left"></div>
         <div className="products-list">
           <ul className="grid">
             {products.map((product) => (
