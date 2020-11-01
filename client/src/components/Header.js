@@ -32,19 +32,21 @@ function Header(props) {
             </NavItem>
             {userInfo ? (
               <NavItem>
-                <NavLink href="/profile"> {userInfo.name}</NavLink>
+                <NavLink to="/profile"> {userInfo.name}</NavLink>
               </NavItem>
             ) : (
               <NavItem>
-                <NavLink href="/signin">Sign in</NavLink>
+                <Link className="nav-link" to="/signin">
+                  Sign in
+                </Link>
               </NavItem>
             )}
             {userInfo ? (
-              <li className="">
-                <NavItem>
-                  <NavLink href="/products">Admin</NavLink>
-                </NavItem>
-              </li>
+              <NavItem>
+                <Link className="nav-link" to="/products">
+                  Admin
+                </Link>
+              </NavItem>
             ) : null}
           </Nav>
         </Collapse>
