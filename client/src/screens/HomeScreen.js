@@ -30,6 +30,12 @@ function HomeScreen(props) {
       //
     };
   }, []);
+  const openMenu = () => {
+    document.querySelector(".sidebar").classList.add("open");
+  };
+  const closeMenu = () => {
+    document.querySelector(".sidebar").classList.remove("open");
+  };
   return loading ? (
     <div className="center">
       <Spinner style={{ width: "3rem", height: "3rem" }} />
@@ -39,7 +45,20 @@ function HomeScreen(props) {
   ) : (
     <div className="home-page">
       <div className="home-right">
-        <div className="nav-left"></div>
+        {/* <aside className="sidebar">
+          <h3>shopping categories</h3>
+          <button className="sidebar-close" onClick={closeMenu}>
+            X
+          </button>
+          <ul>
+            <li>
+              <a href="pants.html">Pants</a>
+            </li>
+            <li>
+              <a href="shirts.html">Shirts</a>
+            </li>
+          </ul>
+        </aside> */}
         <div className="products-list">
           <ul className="grid">
             {products.map((product) => (

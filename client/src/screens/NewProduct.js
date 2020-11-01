@@ -72,7 +72,7 @@ function NewProduct(props) {
   };
 
   return (
-    <div className="form">
+    <div className="products-admin">
       <Container>
         <Button
           variant="primary"
@@ -212,16 +212,16 @@ function NewProduct(props) {
         </Container>
       )}
       <Container>
-        <Table striped bordered hover>
+        <Table striped bordered hover size="sm">
           <thead>
             <tr>
               <th>ID</th>
-              <th>Product Name </th>
-              <th>Product CountInStock</th>
-              <th>Product Price</th>
-              <th>Product Category</th>
-              <th>Product.brand</th>
-              <th>Product action</th>
+              <th> Name </th>
+              <th> Qty</th>
+              <th> Price</th>
+              <th> Category</th>
+              <th>brand</th>
+              <th>action</th>
             </tr>
           </thead>
           {products &&
@@ -237,19 +237,10 @@ function NewProduct(props) {
                   <td>{product.category}</td>
                   <td>{product.brand}</td>
                   <td>
-                    <Button
-                      onClick={() => openModel(product)}
-                      style={{ marginRight: "5px" }}
-                    >
-                      {" "}
-                      Edit
-                    </Button>
-                    <Button
-                      onClick={() => deleteHandler(product)}
-                      variant="danger"
-                    >
+                    <button onClick={() => openModel(product)}> Edit</button>
+                    <button onClick={() => deleteHandler(product)}>
                       Delete
-                    </Button>
+                    </button>
                   </td>
                 </tr>
               </tbody>
