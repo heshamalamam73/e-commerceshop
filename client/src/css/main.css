@@ -1,36 +1,67 @@
-.home-page {
-  min-height: 100vh;
-  padding: 20px; }
-  .home-page .home-right {
-    display: flex;
-    width: 100%;
-    height: 100%; }
-    .home-page .home-right .products-list {
-      padding: 20px; }
-      .home-page .home-right .products-list .grid {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: space-around;
-        justify-content: space-evenly; }
-        .home-page .home-right .products-list .grid li {
-          width: 300px;
-          text-transform: capitalize;
-          padding: 5px 5px; }
-          .home-page .home-right .products-list .grid li .card {
-            padding: 0 20px;
-            border: none; }
-            .home-page .home-right .products-list .grid li .card .alert {
-              background-color: white !important;
-              border: none;
-              padding: 0; }
-            .home-page .home-right .products-list .grid li .card img {
-              text-align: center;
-              margin: 0 auto;
-              max-width: 100%; }
-          .home-page .home-right .products-list .grid li .card:hover {
-            transition: all 0.25s;
-            cursor: pointer; }
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap");
+.flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between; }
+  .flex .button:hover,
+  .flex .button:focus,
+  .flex .button:after {
+    background-color: white;
+    outline: none; }
+  .flex .form-control {
+    background-color: white;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    font-size: 8px;
+    color: #2c3e50 !important; }
+
+.show-btn,
+.nav,
+.nav-bar,
+a,
+p {
+  color: #2c3e50 !important;
+  font-family: "Libre Baskerville", serif;
+  text-decoration: none !important; }
+
+.navbar {
+  border-bottom: 1px solid #eee; }
+
+.campgrounds {
+  padding: 20px;
+  height: auto !important;
+  min-height: auto !important; }
+  .campgrounds .campground {
+    color: #2c3e50 !important;
+    padding: 10px;
+    height: auto !important;
+    max-height: auto !important; }
+    .campgrounds .campground .h5 {
+      columns: #232323;
+      font-size: 12px;
+      font-weight: bold; }
+    .campgrounds .campground a,
+    .campgrounds .campground p {
+      font-size: 14px;
+      font-weight: bold; }
+    .campgrounds .campground img {
+      max-height: 200px; }
+    .campgrounds .campground .product-footer {
+      border: none;
+      background-color: white;
+      height: 50px;
+      text-transform: capitalize;
+      display: flex !important;
+      flex-direction: row;
+      justify-content: space-between; }
+
+#descText {
+  max-height: 110px;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
 
 .products-admin {
   max-width: 100vw;
@@ -71,8 +102,7 @@
   align-items: center;
   display: flex;
   text-transform: capitalize;
-  color: white;
-  background-color: #203040; }
+  border-top: 1px solid #eee; }
 
 .product-screen {
   width: 100%;

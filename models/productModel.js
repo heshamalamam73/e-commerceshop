@@ -10,6 +10,8 @@ const productSchema = new mongoose.Schema({
   discription: { type: String },
   rating: { type: Number, default: 0 },
   numReviews: { type: Number, default: 0 },
+  size: [{ type: String }],
+  color: [{ type: String }],
 });
 const productModel = mongoose.model("Product", productSchema);
 export default productModel;

@@ -6,6 +6,8 @@ const mongodbUrl = config.MONGODB_URL;
 import userRoute from "./routes/userRoute.js";
 import producRoute from "./routes/productRoute.js";
 import bodyParser from "body-parser";
+import { seedDb } from "./seeds/index.js";
+
 dotenv.config();
 
 const app = express();
@@ -31,6 +33,7 @@ if (process.env.NODE_ENV) {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
+// seedDb();
 
 const port = process.env.PORT || 3000;
 

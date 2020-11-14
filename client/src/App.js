@@ -27,20 +27,7 @@ function App() {
     <Router>
       <div>
         <Header userInfo={userInfo} />
-        <aside className="sidebar">
-          <h3>shopping categories</h3>
-          <button className="sidebar-close" onClick={closeMenu}>
-            X
-          </button>
-          <ul>
-            <li>
-              <a href="pants.html">Pants</a>
-            </li>
-            <li>
-              <a href="shirts.html">Shirts</a>
-            </li>
-          </ul>
-        </aside>
+       
         <main className="main">
           <div className="content">
             <Route path="/" component={HomeScreen} exact={true} />

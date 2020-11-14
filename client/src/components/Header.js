@@ -22,9 +22,9 @@ function Header(props) {
   const { userInfo } = props;
   return (
     <div>
-      <Navbar color="dark" dark expand="md">
+      <Navbar expand="md" color="faded" light>
         <NavbarBrand href="/">Let's Shopping</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
+        <NavbarToggler onClick={toggle} dark />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
