@@ -8,7 +8,6 @@ router.get("/", async (req, res) => {
   const products = await Product.find({});
   res.send(products);
 });
-
 router.post("/", isAuth, isAdmin, async (req, res) => {
   try {
     const product = new Product({
@@ -23,6 +22,7 @@ router.post("/", isAuth, isAdmin, async (req, res) => {
       rating: req.body.rating,
     });
     const newProduct = await product.save();
+    req.flash("sucess", "Succecfully  added new product ");
     if (newProduct) {
       res
         .status(201)

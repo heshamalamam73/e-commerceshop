@@ -10,6 +10,8 @@ import {
 import {
   userSigninReducer,
   userRigesterReducer,
+  userSignoutReducer,
+  setCurrentUser,
 } from "./reducers/userReducer.js";
 import thunk from "redux-thunk";
 const cartItems = Cookie.getJSON("cartItems") || [];
@@ -28,8 +30,10 @@ const reducer = combineReducers({
   productsList: productsListReducer,
   productDetails: productDetailsReducer,
   cart: cartReducer,
+  currentUser: setCurrentUser,
   userSignin: userSigninReducer,
   userRigester: userRigesterReducer,
+  userSignOut: userSignoutReducer,
   createProduct: PostNewProductReducer,
   deleteProduct: deleteProductReducer,
 });

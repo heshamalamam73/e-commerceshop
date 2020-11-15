@@ -9,28 +9,28 @@ import ChickOutSteps from "../components/ChickOutSteps";
 
 function RigesterScreen(props) {
   const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [repassword, setRepassword] = useState("");
 
   const userRigester = useSelector((state) => state.userRigester);
-  const { loading, data, error } = userRigester;
+  const { loading, error, message, userInfo } = userRigester;
   const dispatch = useDispatch();
   const redirect = props.location.search
     ? props.location.search.split("=")[1]
     : "/";
   useEffect(() => {
-    if (data) {
+    if (message === "logged in successfully") {
       props.history.push(redirect);
     }
     return () => {
       //
     };
-  }, [data]);
+  }, [message]);
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(Rigester(email, password, name));
+    dispatch(Rigester(email, password, username));
   };
 
   return (
@@ -39,8 +39,8 @@ function RigesterScreen(props) {
 
       <Form onSubmit={submitHandler} className="form-screen">
         {loading && <Alert color="info">Loading....</Alert>}
-        {error && <Alert color="warning">Invaled Email or Password</Alert>}
-        <Form.Group as={Row} controlId="formHorizontalName">
+        {message && <Alert color="info">{message}</Alert>}
+        <Form.Group as={Row}>
           <Form.Label column sm={2}>
             Email
           </Form.Label>
@@ -53,9 +53,9 @@ function RigesterScreen(props) {
             />
           </Col>
         </Form.Group>
-        <Form.Group as={Row} controlId="formHorizontalName">
+        <Form.Group as={Row}>
           <Form.Label column sm={2}>
-            Name
+            User Name
           </Form.Label>
           <Col sm={10}>
             <Form.Control
@@ -63,11 +63,11 @@ function RigesterScreen(props) {
               type="text"
               name="name"
               id="name"
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => setUsername(e.target.value)}
             />
           </Col>
         </Form.Group>
-        <Form.Group as={Row} controlId="formHorizontalName">
+        <Form.Group as={Row}>
           <Form.Label column sm={2}>
             Password
           </Form.Label>
@@ -80,7 +80,7 @@ function RigesterScreen(props) {
             />
           </Col>
         </Form.Group>
-        <Form.Group as={Row} controlId="formHorizontalName">
+        <Form.Group as={Row}>
           <Form.Label column sm={2}>
             RePassword
           </Form.Label>

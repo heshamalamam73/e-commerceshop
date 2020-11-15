@@ -48,9 +48,11 @@ const postNewProduct = (product) => async (dispatch, getState) => {
       );
       dispatch({ type: PRODUCT_POST_SUCCESS, payload: product });
     } else {
-      const { data } = await axios.post("/api/products", product, {
-        headers: { authorization: "bearer " + userInfo.token },
-      });
+      const { data } = await axios
+        .post("/api/products", product, {
+          headers: { authorization: "bearer " + userInfo.token },
+        })
+        .then((res) => console.log(res));
       dispatch({ type: PRODUCT_POST_SUCCESS, payload: product });
     }
   } catch (error) {

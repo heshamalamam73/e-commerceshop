@@ -7,10 +7,10 @@ import { Table, Button, Form, Row, Col, Container } from "react-bootstrap";
 import { Alert } from "reactstrap";
 import ChickOutSteps from "../components/ChickOutSteps";
 function SignInScreen(props) {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const userSignin = useSelector((state) => state.userSignin);
-  const { loading, userInfo, error } = userSignin;
+  const { loading, userInfo, message } = userSignin;
   const dispatch = useDispatch();
   const redirect = props.location.search
     ? props.location.search.split("=")[1]
@@ -26,26 +26,25 @@ function SignInScreen(props) {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(signin(email, password));
+    dispatch(signin(username, password));
   };
 
   return (
     <Container className="sign-screen">
       <ChickOutSteps step1></ChickOutSteps>
-
       <Form onSubmit={submitHandler} className="form-screen">
         {loading && <Alert color="info">Loading....</Alert>}
-        {error && <Alert color="warning">Invaled Email or Password</Alert>}
+        {message && <Alert color="danger">{message}</Alert>}
         <Form.Group as={Row} controlId="formHorizontalName">
           <Form.Label column sm={2}>
-            Email
+            User Name
           </Form.Label>
           <Col sm={10}>
             <Form.Control
-              type="email"
-              placeholder="Email Address"
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
+              type="text"
+              placeholder="User Name "
+              onChange={(e) => setUsername(e.target.value)}
+              value={username}
             />
           </Col>
         </Form.Group>

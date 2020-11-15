@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addToCart, removeFromCart } from "../actions/cartActions";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Jumbotron, Container } from "react-bootstrap";
 
 function CartScreen(props) {
   const cart = useSelector((state) => state.cart);
@@ -25,8 +26,18 @@ function CartScreen(props) {
     }
   }, []);
 
-  return (
-    <div className="cart-screen">
+  return cartItems.length <= 0 ? (
+    <Jumbotron fluid className="cart-screen">
+      <Container>
+        <i class="fas fa-cart-arrow-down"></i>
+        <h1>The Cart Is Empty</h1>
+        <p>
+          Let's Shopping and add some <a href="/">Products</a>
+        </p>
+      </Container>
+    </Jumbotron>
+  ) : (
+    <Container className="cart-screen">
       <div className="cart-items-list">
         {cartItems.map((item, index) => (
           <div className="cart-item-list">
@@ -90,7 +101,7 @@ function CartScreen(props) {
           proceed to checkout
         </button>
       </div>
-    </div>
+    </Container>
   );
 }
 export default CartScreen;

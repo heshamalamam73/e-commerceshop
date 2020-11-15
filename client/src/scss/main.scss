@@ -14,9 +14,9 @@
   .form-control {
     background-color: white;
     outline: none;
-    margin: 0;
-    padding: 0;
-    font-size: 8px;
+    margin: 0px auto;
+    padding: 0 1px;
+    font-size: 6px;
     color: #2c3e50 !important;
   }
 }
@@ -32,6 +32,10 @@ p {
 .navbar {
   border-bottom: 1px solid #eee;
 }
+.active {
+  color: #f08000;
+}
+
 .campgrounds {
   padding: 20px;
   height: auto !important;

@@ -12,6 +12,8 @@ import ShippingScreen from "./screens/shippingScreen";
 import PaymentScreen from "./screens/PaymentScreen";
 import PlaceOrder from "./screens/PlaceOrder";
 import Header from "./components/Header";
+import { signout } from "./actions/userAction";
+
 function App() {
   const openMenu = () => {
     document.querySelector(".sidebar").classList.add("open");
@@ -20,14 +22,19 @@ function App() {
     document.querySelector(".sidebar").classList.remove("open");
   };
   const cart = useSelector((state) => state.cart);
-  const userSignin = useSelector((state) => state.userSignin);
-  const { userInfo } = userSignin;
+  const currentUser = useSelector((state) => state.currentUser);
+  const { isAuhenticated, user } = currentUser;
   const { cartItems } = cart;
   return (
     <Router>
       <div>
-        <Header userInfo={userInfo} />
-       
+        <Header
+          cartItems={cartItems}
+          signout={signout}
+          isAuhenticated={isAuhenticated}
+          user={user}
+        />
+
         <main className="main">
           <div className="content">
             <Route path="/" component={HomeScreen} exact={true} />

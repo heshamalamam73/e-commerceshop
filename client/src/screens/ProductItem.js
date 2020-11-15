@@ -23,17 +23,19 @@ function ProductItem(props) {
         <div className="flex">
           <Input type="select" name="select" id="exampleSelect">
             <option>Size</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+            <option>xs</option>
+            <option>sm</option>
+            <option>m</option>
+            <option>l</option>
+            <option>xl</option>
+            <option>xxl</option>
           </Input>
           <Input type="select" name="select" id="exampleSelect">
             <option>Color</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+            <option>red</option>
+            <option>block</option>
+            <option>yellow</option>
+            <option>blue</option>
           </Input>
           <Button className="button form-control">Add</Button>
         </div>

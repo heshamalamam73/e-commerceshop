@@ -1,46 +1,76 @@
 import express from "express";
 import User from "../models/userModel.js";
 import { getToken } from "../util.js";
+import passport from "passport";
 
 const router = express.Router();
-router.post("/signin", async (req, res) => {
-  const signinUser = await User.findOne({
-    email: req.body.email,
-    password: req.body.password,
-  });
-  if (signinUser) {
-    res.send({
-      _id: signinUser._id,
-      name: signinUser.name,
-      email: signinUser.email,
-      isAdmin: signinUser.isAdmin,
-      token: getToken(signinUser),
+
+router.post("/register", async function (req, res) {
+  try {
+    const { email, password, username } = req.body;
+    const user = new User({ email, username });
+    await User.register(user, req.body.password, function (err, user) {
+      if (user) {
+        const token = getToken(user);
+        res.json({
+          success: true,
+          message: "logged in successfully",
+          token: token,
+          username: user.username,
+          isAdmin: user.isAdmin,
+          image: user.image,
+          email: user.email,
+        });
+      }
+      res.json(err);
     });
-  } else {
-    res.status(401).send({ message: "invalid Email or Password" });
+  } catch (err) {
+    res.json(err);
   }
 });
-router.post("/rigester", async (req, res) => {
-  try {
-    const user = new User({
-      name: req.body.name,
-      email: req.body.email,
-      password: req.body.password,
-    });
-    const newUser = await user.save();
-    if (newUser) {
-      res.send({
-        _id: newUser._id,
-        name: newUser.name,
-        email: newUser.email,
-        isAdmin: newUser.isAdmin,
-        token: getToken(newUser),
-      });
+router.post("/login", (req, res) => {
+  if (!req.body.username) {
+    res.json({ success: false, message: "Username was not given" });
+  } else {
+    if (!req.body.password) {
+      res.json({ success: false, message: "Password was not given" });
     } else {
-      res.status(401).send({ msg: "invalid user data" });
+      passport.authenticate("local", function (err, user, info) {
+        if (err) {
+          res.json({ success: false, message: err.message });
+        } else {
+          if (!user) {
+            res.json({
+              success: false,
+              message: "username or password incorrect",
+            });
+          } else {
+            req.login(user, function (err) {
+              if (err) {
+                res.json({ success: false, message: err.message });
+              } else {
+                const token = getToken(user);
+
+                res.json({
+                  success: true,
+                  message: "Authentication  successful",
+                  token: token,
+                  username: user.username,
+                  isAdmin: user.isAdmin,
+                  image: user.image,
+                  email: user.email,
+                });
+              }
+            });
+          }
+        }
+      })(req, res);
     }
-  } catch (error) {
-    res.status(401).send({ msg: "invalid user data (email-name)" });
   }
+});
+
+router.get("/logout", async (req, res) => {
+  req.logout();
+  res.json({ message: "logout successful" });
 });
 export default router;
