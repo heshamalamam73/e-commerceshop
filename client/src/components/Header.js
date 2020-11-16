@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   Collapse,
   Navbar,
@@ -8,13 +8,8 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
 } from "reactstrap";
-import { useDispatch, useSelector } from "react-redux";
-import { sign } from "jsonwebtoken";
+import { useDispatch } from "react-redux";
 
 function Header(props) {
   const dispatch = useDispatch();
@@ -40,15 +35,11 @@ function Header(props) {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/">
-                {/* <i className="fas fa-home "></i> */}
-                Home
-              </NavLink>
+              <NavLink href="/">Home</NavLink>
             </NavItem>
             {isAuhenticated ? (
               <NavItem>
                 <Link className="nav-link" onClick={handlelogout}>
-                  {/* <i className="fas fa-user"></i> */}
                   Log Out
                 </Link>
               </NavItem>
@@ -62,7 +53,6 @@ function Header(props) {
             {user.isAdmin ? (
               <NavItem>
                 <Link className="nav-link" to="/products">
-                  {/* <i className="fas fa-unlock-alt"></i> */}
                   Admin
                 </Link>
               </NavItem>
@@ -76,9 +66,8 @@ function Header(props) {
                       : "fas fa-shopping-cart"
                   }
                 >
-                  {" "}
                   <sup>{props.cartItems.length}</sup>
-                </i>{" "}
+                </i>
               </Link>
             </NavItem>
           </Nav>

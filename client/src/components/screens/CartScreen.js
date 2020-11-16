@@ -1,8 +1,8 @@
-import React, { Component, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addToCart, removeFromCart } from "../actions/cartActions";
+import { addToCart, removeFromCart } from "../../redux/actions/cartActions";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+
 import { Jumbotron, Container } from "react-bootstrap";
 
 function CartScreen(props) {

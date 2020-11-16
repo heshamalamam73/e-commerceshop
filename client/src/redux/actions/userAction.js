@@ -7,7 +7,7 @@ import {
   USER_RIGESTER_FAIL,
   USER_LOGOUT_SUCCESS,
   SET_CURRENT_USER,
-} from "../constants/userActionType";
+} from "../actionType/userActionType";
 import Cookie from "js-cookie";
 import axios from "axios";
 import setTokenHeader from "../helpers/setAuth";

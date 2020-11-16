@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { detailsProduct } from "../actions/productActions";
+import { detailsProduct } from "../../redux/actions/productActions";
 import { useSelector, useDispatch } from "react-redux";
 import { Modal, Button } from "react-bootstrap";
 import { Spinner } from "reactstrap";

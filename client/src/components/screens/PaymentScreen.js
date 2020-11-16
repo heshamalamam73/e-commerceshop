@@ -2,8 +2,11 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { saveShipping, savePaymentMethod } from "../actions/cartActions";
-import ChickOutSteps from "../components/ChickOutSteps";
+import {
+  saveShipping,
+  savePaymentMethod,
+} from "../../redux/actions/cartActions";
+import ChickOutSteps from "../ChickOutSteps";
 import { Table, Button, Form, Row, Col, Container } from "react-bootstrap";
 import { Alert } from "reactstrap";
 function PaymentScreen(props) {

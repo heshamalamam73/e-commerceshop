@@ -7,7 +7,7 @@ const {
   USER_RIGESTER_REQUEST,
   USER_LOGOUT_SUCCESS,
   SET_CURRENT_USER,
-} = require("../constants/userActionType");
+} = require("../actionType/userActionType");
 const DEFAULT_STATE = {
   isAuhenticated: false,
   user: {},

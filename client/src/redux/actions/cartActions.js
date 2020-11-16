@@ -3,7 +3,7 @@ import {
   CART_REMOVE_ITEM,
   CART_SAVE_SHIPPING,
   ENTER_PAYMENT_METHOD,
-} from "../constants/cartActiontype.js";
+} from "../actionType/cartActiontype";
 import axios from "axios";
 import Cookie from "js-cookie";
 

@@ -1,14 +1,17 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+
 import { useDispatch, useSelector } from "react-redux";
-import { postNewProduct, deleteUnProduct } from "../actions/productActions.js";
-import { listProducts } from "../actions/productActions";
+import {
+  postNewProduct,
+  deleteUnProduct,
+} from "../../redux/reducers/reducers/actions/productActions.js";
+import { listProducts } from "../../redux/reducers/reducers/actions/productActions";
 import { Table, Button, Form, Row, Col, Container } from "react-bootstrap";
 
 function NewProduct(props) {
   const productsList = useSelector((state) => state.productsList);
-  const { products, loading, error } = productsList;
+  const { products } = productsList;
   const [modelVisable, setModelVisable] = useState(false);
   const [name, setName] = useState("");
   const [id, setId] = useState("");
@@ -22,7 +25,7 @@ function NewProduct(props) {
   const [rating, setRating] = useState("");
   const savedProduct = useSelector((state) => state.createProduct);
   const deleteproduct = useSelector((state) => state.deleteProduct);
-  const { deleteSuccess, deleteFail, deleteLoading } = deleteproduct;
+  const { deleteSuccess } = deleteproduct;
   const { success } = savedProduct;
 
   const dispatch = useDispatch();

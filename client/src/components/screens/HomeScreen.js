@@ -1,22 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+
 import { useSelector, useDispatch } from "react-redux";
-import { listProducts } from "../actions/productActions.js";
-import { Spinner, Alert } from "reactstrap";
-import ProductItem from "../screens/ProductItem";
-import {
-  Container,
-  Col,
-  Row,
-  Card,
-  CardBody,
-  Button,
-  CardTitle,
-  CardText,
-  CardImg,
-} from "reactstrap";
-import LeftNav from "../components/LeftNav.js";
-import UpNav from "../components/UpNav";
+import { listProducts } from "../../redux/actions/productActions";
+import { Spinner } from "reactstrap";
+import ProductItem from "./ProductItem";
+import { Container, Row } from "reactstrap";
 
 function HomeScreen(props) {
   const productsList = useSelector((state) => state.productsList);
@@ -31,12 +19,7 @@ function HomeScreen(props) {
       //
     };
   }, []);
-  const openMenu = () => {
-    document.querySelector(".sidebar").classList.add("open");
-  };
-  const closeMenu = () => {
-    document.querySelector(".sidebar").classList.remove("open");
-  };
+
   return loading ? (
     <div className="center">
       <Spinner style={{ width: "3rem", height: "3rem" }} />

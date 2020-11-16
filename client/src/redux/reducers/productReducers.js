@@ -1,4 +1,3 @@
-import { Switch } from "react-router-dom";
 import {
   PRODUCT_LIST_REQUEST,
   PRODUCT_LIST_SUCCESS,
@@ -12,7 +11,7 @@ import {
   PRODUCT_DELETE_REQUEST,
   PRODUCT_DELETE_SUCCESS,
   PRODUCT_DELETE_FAIL,
-} from "../constants/productActionType.js";
+} from "../actionType/productActionType";
 
 function productsListReducer(state = { products: [] }, action) {
   switch (action.type) {

@@ -2,53 +2,72 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { signin } from "../actions/userAction.js";
+import { Rigester } from "../../redux/actions/userAction";
 import { Table, Button, Form, Row, Col, Container } from "react-bootstrap";
 import { Alert } from "reactstrap";
-import ChickOutSteps from "../components/ChickOutSteps";
-function SignInScreen(props) {
+import ChickOutSteps from "../ChickOutSteps";
+
+function RigesterScreen(props) {
+  const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const userSignin = useSelector((state) => state.userSignin);
-  const { loading, userInfo, message } = userSignin;
+  const [repassword, setRepassword] = useState("");
+
+  const userRigester = useSelector((state) => state.userRigester);
+  const { loading, error, message, userInfo } = userRigester;
   const dispatch = useDispatch();
   const redirect = props.location.search
     ? props.location.search.split("=")[1]
     : "/";
   useEffect(() => {
-    if (userInfo) {
+    if (message === "logged in successfully") {
       props.history.push(redirect);
     }
     return () => {
       //
     };
-  }, [userInfo]);
+  }, [message]);
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(signin(username, password));
+    dispatch(Rigester(email, password, username));
   };
 
   return (
     <Container className="sign-screen">
       <ChickOutSteps step1></ChickOutSteps>
+
       <Form onSubmit={submitHandler} className="form-screen">
         {loading && <Alert color="info">Loading....</Alert>}
-        {message && <Alert color="danger">{message}</Alert>}
-        <Form.Group as={Row} controlId="formHorizontalName">
+        {message && <Alert color="info">{message}</Alert>}
+        <Form.Group as={Row}>
+          <Form.Label column sm={2}>
+            Email
+          </Form.Label>
+          <Col sm={10}>
+            <Form.Control
+              type="email"
+              placeholder="Email Address"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+            />
+          </Col>
+        </Form.Group>
+        <Form.Group as={Row}>
           <Form.Label column sm={2}>
             User Name
           </Form.Label>
           <Col sm={10}>
             <Form.Control
+              placeholder="Your Name"
               type="text"
-              placeholder="User Name "
+              name="name"
+              id="name"
               onChange={(e) => setUsername(e.target.value)}
-              value={username}
             />
           </Col>
         </Form.Group>
-        <Form.Group as={Row} controlId="formHorizontalName">
+        <Form.Group as={Row}>
           <Form.Label column sm={2}>
             Password
           </Form.Label>
@@ -62,22 +81,33 @@ function SignInScreen(props) {
           </Col>
         </Form.Group>
         <Form.Group as={Row}>
+          <Form.Label column sm={2}>
+            RePassword
+          </Form.Label>
+          <Col sm={10}>
+            <Form.Control
+              type="password"
+              name="password"
+              id="repassword"
+              onChange={(e) => setRepassword(e.target.value)}
+            />
+          </Col>
+        </Form.Group>
+        <Form.Group as={Row}>
           <Col sm={{ span: 10, offset: 2 }}>
             <Button
               style={{ margin: "10px" }}
               type="submit"
               onClick={submitHandler}
             >
-              Sign in
+              Rigester
             </Button>
           </Col>
         </Form.Group>
         <Form.Group as={Row}>
           <Col sm={{ span: 10, offset: 2 }}>
             <Link
-              to={
-                redirect === "/" ? "rigester" : "rigester?redirect=" + redirect
-              }
+              to={redirect === "/" ? "signin" : "signin?redirect=" + redirect}
               className="button full-width"
             >
               Create New acconut
@@ -88,4 +118,4 @@ function SignInScreen(props) {
     </Container>
   );
 }
-export default SignInScreen;
+export default RigesterScreen;

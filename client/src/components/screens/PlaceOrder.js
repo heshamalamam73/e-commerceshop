@@ -2,8 +2,8 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { saveShipping } from "../actions/cartActions";
-import ChickOutSteps from "../components/ChickOutSteps";
+import { saveShipping } from "../../redux/actions/cartActions";
+import ChickOutSteps from "../ChickOutSteps";
 import { Button } from "react-bootstrap";
 import {
   Container,
@@ -25,12 +25,12 @@ function PlaceOrder(props) {
   const shippingPrice = itemsPrice > 100 ? 0 : 10;
   const totalPrice = itemsPrice + tax + shippingPrice;
   const dispatch = useDispatch();
-  // if (!payment) {
-  //   props.history.push("/payment");
-  // }
-  // if (!shipping) {
-  //   props.history.push("/shipping");
-  // }
+  if (!payment) {
+    props.history.push("/payment");
+  }
+  if (!shipping) {
+    props.history.push("/shipping");
+  }
 
   const submitHandler = (e) => {
     e.preventDefault();

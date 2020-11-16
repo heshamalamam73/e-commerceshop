@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
+import React from "react";
+
 import { Link } from "react-router-dom";
 
 function UpNav(props) {
-  const [active, setActive] = useState(false);
-
   return (
     <div className="top-nav">
       <ul classeName="top-nav-item">
