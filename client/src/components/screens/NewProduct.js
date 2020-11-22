@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   postNewProduct,
   deleteUnProduct,
-} from "../../redux/reducers/reducers/actions/productActions.js";
-import { listProducts } from "../../redux/reducers/reducers/actions/productActions";
+} from "../../redux/actions/productActions";
+import { listProducts } from "../../redux/actions/productActions";
 import { Table, Button, Form, Row, Col, Container } from "react-bootstrap";
 
 function NewProduct(props) {
