@@ -43,8 +43,8 @@ function HomeScreen(props) {
             <button className="btn mr-5 button">Sfoglia il volantino</button>
           </Col>
         </Row>
-      </Container>
-      <div className="prefooter">
+      </Container >
+      <div className="prefooter" id="services">
         <Row>
           <Col>
             <h2>AL TUO SERVIZIO</h2>

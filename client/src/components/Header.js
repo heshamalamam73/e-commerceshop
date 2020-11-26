@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
+
 import {
   Collapse,
   Navbar,
@@ -12,9 +13,20 @@ import {
 import { useDispatch } from "react-redux";
 import { Container, Form, Row, FormControl, Button } from "react-bootstrap";
 import { FaShoppingCart } from 'react-icons/fa'
+import Topnav from "./screens/Topnav";
 
 function Header(props) {
   const dispatch = useDispatch();
+
+  const handleopen = () => {
+    const nav = document.getElementById("mySidenav")
+    nav.style.width = "300px";
+  }
+  const handleclose = () => {
+    const nav = document.getElementById("mySidenav")
+    nav.style.width = "0px";
+
+  }
 
   const [isOpen, setIsOpen] = useState(false);
   const active = props.cartItems.length > 0 ? true : false;
@@ -28,6 +40,10 @@ function Header(props) {
   };
   return (
     <Navbar bg="light" expand="lg" light sticky='bottom'  >
+
+      <span style={{ fontSize: '23px', cursor: 'pointer', padding: '0 20px' }} onClick={handleopen}> &#9776; </span>
+
+
       <NavbarBrand href="/">Let's Shopping</NavbarBrand>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>

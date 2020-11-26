@@ -13,6 +13,7 @@ import Header from "../components/Header";
 import { useSelector, useDispatch } from "react-redux";
 import { signout } from "../redux/actions/userAction";
 import Products from '../components/screens/Products'
+import LeftNav from '../components/LeftNav'
 function Main() {
   const cart = useSelector((state) => state.cart);
   const currentUser = useSelector((state) => state.currentUser);
@@ -21,6 +22,7 @@ function Main() {
 
   return (
     <Router>
+      <LeftNav />
       <Header
         cartItems={cartItems}
         signout={signout}

@@ -6,7 +6,7 @@ function Footer(props) {
 
 
   return (
-    <div className="footer">
+    <div className="footer" id="cantact">
       <Row>
         <Col md={4} xs={12}>
           <span>ISCRIVITI ALLA NEWSLETTER</span>
@@ -19,7 +19,7 @@ function Footer(props) {
         </Col>
         <Col md={4} xs={12}>
 
-          <div className='social'>
+          <div className='social' >
             <h4>SEGUICI SUI SOCIAL</h4>
             <a href="https://twitter.com/hesham_alamam"><AiFillTwitterCircle />  </a>
             <a href="https://www.facebook.com/mahmoudhassan993"> <AiFillFacebook /></a>
