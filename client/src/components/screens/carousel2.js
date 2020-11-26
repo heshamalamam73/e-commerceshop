@@ -12,7 +12,7 @@ import img6 from '../../img/slid6.png'
 export default class Carousel2 extends Component {
   render() {
     var settings = {
-      dots: true,
+      dots: false,
       infinite: false,
       speed: 500,
       slidesToShow: 1,
@@ -49,7 +49,10 @@ export default class Carousel2 extends Component {
       <div className="slider">
         <Slider {...settings}>
           <div>
-            <img src="{img2} " />
+            <img src={img1} />
+          </div>
+          <div>
+            <img src={img2} />
           </div>
           <div>
             <img src={img3} />
@@ -59,9 +62,6 @@ export default class Carousel2 extends Component {
           </div>
           <div>
             <img src={img5} />
-          </div>
-          <div>
-            <img src={img6} />
           </div>
 
         </Slider>

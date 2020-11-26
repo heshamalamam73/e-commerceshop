@@ -29,23 +29,21 @@
     // top: 30px;
     padding: 30px;
     margin: 40px 0;
-    button {
-        box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
-        padding: 15px 30px;
-        margin: 0px auto;
-        text-align: center;
-        border-color: #343a40;
-        color: #2c3e50;
-        border-radius: 10px;
-    }
 }
 
 .prefooter {
     margin-top: 20px;
     min-height: 200px;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
+    .row {
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        color: #203040;
+    }
     h1 {
         margin: 10px auto;
         display: block;
@@ -299,6 +297,18 @@ p {
     }
 }
 
+.button {
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    color: #343a40;
+    text-transform: capitalize;
+    outline: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
+}
+
 .home {
     min-height: 100vh;
 }
@@ -322,8 +332,8 @@ button {
 }
 
 .sign {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
     min-height: 100vh;
-    background-color: #f08000;
     border-radius: 200px 10px;
     box-sizing: border-box;
     margin-top: 35px;
@@ -335,6 +345,7 @@ button {
     // flex-direction: row;
     // flex-wrap: wrap;
     .signBox {
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
         border-radius: 10px;
         padding: 30px;
         text-align: left;
@@ -443,7 +454,6 @@ button {
 
 .footer {
     text-align: center;
-    height: 300px;
     background-color: #2c3e50;
     color: #ddd;
     text-transform: capitalize;
@@ -458,13 +468,36 @@ button {
         width: 100%;
         outline: none;
         color: #203040;
-        padding: 3px;
+        padding: 10px 19px;
         margin: 20px 0px;
+        border-radius: 10px;
+        border: 0;
     }
     a {
         font-size: 30px;
         color: #f08000;
         align-items: left;
+    }
+}
+
+.blackfriday {
+    .row {
+        text-align: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .row .col-12 {
+        padding: 10px;
+        text-align: center;
+    }
+    button {
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
+        padding: 15px 30px;
+        margin: 0px auto;
+        text-align: center;
+        border-color: #343a40;
+        color: #2c3e50;
+        border-radius: 10px;
     }
 }
 

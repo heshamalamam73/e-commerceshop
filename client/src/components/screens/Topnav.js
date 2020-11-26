@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import TopnavItems from './TopnavItems'
 
 function Topnav() {
@@ -10,7 +11,7 @@ function Topnav() {
 
   return (
     <ul className='top-nav'>
-      <li> <a href="/allproducts"> All Products</a></li>
+      <li> <Link to="/allproducts"> All Products</Link></li>
       <li className="dropdown" onClick={handleChangeItem(this, 1)}>
 
         <a href="#" > Informatica</a>
