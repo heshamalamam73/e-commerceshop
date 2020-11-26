@@ -10,6 +10,8 @@ import {
   NavLink,
 } from "reactstrap";
 import { useDispatch } from "react-redux";
+import { Container, Form, Row, FormControl, Button } from "react-bootstrap";
+import { FaShoppingCart } from 'react-icons/fa'
 
 function Header(props) {
   const dispatch = useDispatch();
@@ -25,55 +27,55 @@ function Header(props) {
     dispatch(signout());
   };
   return (
-    <div>
-      <Navbar expand="md" color="faded" light>
-        <NavbarBrand href="/">
-          <i className="fas fa-shopping-bag mr-2"></i>
-          Let's Shopping
-        </NavbarBrand>
-        <NavbarToggler onClick={toggle} dark="true" />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
+    <Navbar bg="light" expand="lg" light sticky='bottom'  >
+      <NavbarBrand href="/">Let's Shopping</NavbarBrand>
+      <NavbarToggler onClick={toggle} />
+      <Collapse isOpen={isOpen} navbar>
+        <Nav className="ml-auto" navbar>
+          <input type="text" placeholder="Cerca Per Prodetto , Modello , Brand" className="nav-search" />
+
+          {isAuhenticated ? (
             <NavItem>
-              <NavLink href="/">Home</NavLink>
-            </NavItem>
-            {isAuhenticated ? (
-              <NavItem>
-                <Link className="nav-link" onClick={handlelogout}>
-                  Log Out
-                </Link>
-              </NavItem>
-            ) : (
-              <NavItem>
-                <Link className="nav-link" to="/signin">
-                  Sign in
-                </Link>
-              </NavItem>
-            )}
-            {user.isAdmin ? (
-              <NavItem>
-                <Link className="nav-link" to="/products">
-                  Admin
-                </Link>
-              </NavItem>
-            ) : null}
-            <NavItem>
-              <Link className="nav-link" to="/cart">
-                <i
-                  className={
-                    active
-                      ? "fas fa-shopping-cart active"
-                      : "fas fa-shopping-cart"
-                  }
-                >
-                  <sup>{props.cartItems.length}</sup>
-                </i>
+              <Link className="nav-link" onClick={handlelogout}>
+                Log Out
               </Link>
             </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </div>
+          ) : (
+              <NavItem>
+                <Link className="nav-link" to="/signin">
+                  Accedi
+              </Link>
+              </NavItem>
+            )}
+          <NavItem>
+            <NavLink href="/storys">Store</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/cart">
+
+              <span
+                className={
+                  active ? "active" : ""
+                }
+              >
+                Carrello
+                <FaShoppingCart />
+                <sup>{props.cartItems.length}</sup>
+
+              </span>
+            </NavLink>
+          </NavItem>
+
+          {user.isAdmin ? (
+            <NavItem>
+              <Link className="nav-link" to="/products">
+                Admin
+              </Link>
+            </NavItem>
+          ) : null}
+        </Nav>
+      </Collapse>
+    </Navbar>
   );
 }
 export default Header;

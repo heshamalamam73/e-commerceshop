@@ -30,62 +30,57 @@ function SignInScreen(props) {
   };
 
   return (
-    <Container className="sign-screen">
-      <ChickOutSteps step1></ChickOutSteps>
-      <Form onSubmit={submitHandler} className="form-screen">
+    <Container className="sign">
+      {/* <ChickOutSteps step1></ChickOutSteps> */}
+      <Form onSubmit={submitHandler} className="signBox">
+        <h2>Log In</h2>
+        <hr />
+
         {loading && <Alert color="info">Loading....</Alert>}
         {message && <Alert color="danger">{message}</Alert>}
-        <Form.Group as={Row} controlId="formHorizontalName">
-          <Form.Label column sm={2}>
+        <Form.Group controlId="formHorizontalName">
+          <Form.Label >
             User Name
           </Form.Label>
-          <Col sm={10}>
-            <Form.Control
-              type="text"
-              placeholder="User Name "
-              onChange={(e) => setUsername(e.target.value)}
-              value={username}
-            />
-          </Col>
+          <Form.Control
+            type="text"
+            placeholder="User Name "
+            onChange={(e) => setUsername(e.target.value)}
+            value={username}
+          />
         </Form.Group>
-        <Form.Group as={Row} controlId="formHorizontalName">
-          <Form.Label column sm={2}>
+        <Form.Group controlId="formHorizontalPassword">
+          <Form.Label  >
             Password
           </Form.Label>
-          <Col sm={10}>
-            <Form.Control
-              type="password"
-              placeholder="Password"
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
-            />
-          </Col>
+          <Form.Control
+            type="password"
+            placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
+          />
         </Form.Group>
-        <Form.Group as={Row}>
-          <Col sm={{ span: 10, offset: 2 }}>
-            <Button
-              style={{ margin: "10px" }}
-              type="submit"
-              onClick={submitHandler}
-            >
-              Sign in
-            </Button>
-          </Col>
+        <Form.Group>
+          <Button
+            style={{ margin: "10px" }}
+            type="submit"
+            onClick={submitHandler}
+          >
+            Log In            </Button>
         </Form.Group>
-        <Form.Group as={Row}>
-          <Col sm={{ span: 10, offset: 2 }}>
-            <Link
-              to={
-                redirect === "/" ? "rigester" : "rigester?redirect=" + redirect
-              }
-              className="button full-width"
-            >
-              Create New acconut
+        <Form.Group >
+
+          <Link
+            to={
+              redirect === "/" ? "rigester" : "rigester?redirect=" + redirect
+            }
+            className="button full-width"
+          >
+            Create New acconut
             </Link>
-          </Col>
         </Form.Group>
       </Form>
-    </Container>
+    </Container >
   );
 }
 export default SignInScreen;

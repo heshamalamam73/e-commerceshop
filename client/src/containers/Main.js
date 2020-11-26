@@ -12,6 +12,7 @@ import CartScreen from "../components/screens/CartScreen";
 import Header from "../components/Header";
 import { useSelector, useDispatch } from "react-redux";
 import { signout } from "../redux/actions/userAction";
+import Products from '../components/screens/Products'
 function Main() {
   const cart = useSelector((state) => state.cart);
   const currentUser = useSelector((state) => state.currentUser);
@@ -26,7 +27,8 @@ function Main() {
         isAuhenticated={isAuhenticated}
         user={user}
       />
-      <Route path="/" component={HomeScreen} exact={true} />
+      <Route path='/' component={HomeScreen} exact={true} />
+      <Route path="/allproducts" component={Products} exact={true} />
       <Route path="/signin" component={SignInScreen} exact={true} />
       <Route path="/rigester" component={RigesterScreen} exact={true} />
       <Route path="/products" component={NewProduct} exact={true} />

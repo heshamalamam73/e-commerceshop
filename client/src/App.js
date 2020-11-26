@@ -1,12 +1,14 @@
 import React from "react";
 import "./App.css";
 import Main from "./containers/Main";
+import Footer from './components/Footer.js'
 
 function App() {
   return (
-    <div>
+    <div className="">
       <Main />
-      <footer className="footer">all rights reserved2020</footer>
+      <Footer />
+
     </div>
   );
 }

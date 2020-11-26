@@ -34,64 +34,60 @@ function RigesterScreen(props) {
   };
 
   return (
-    <Container className="sign-screen">
-      <ChickOutSteps step1></ChickOutSteps>
+    <Container className="sign">
+      {/* <ChickOutSteps step1></ChickOutSteps> */}
 
-      <Form onSubmit={submitHandler} className="form-screen">
+      <Form onSubmit={submitHandler} className="signBox">
+        <h2>Sign Up</h2>
+        <hr />
         {loading && <Alert color="info">Loading....</Alert>}
         {message && <Alert color="info">{message}</Alert>}
-        <Form.Group as={Row}>
-          <Form.Label column sm={2}>
+        <Form.Group >
+          <Form.Label >
             Email
           </Form.Label>
-          <Col sm={10}>
-            <Form.Control
-              type="email"
-              placeholder="Email Address"
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-            />
-          </Col>
+
+          <Form.Control
+            type="email"
+            placeholder="Email Address"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+          />
+
         </Form.Group>
-        <Form.Group as={Row}>
-          <Form.Label column sm={2}>
+        <Form.Group >
+          <Form.Label >
             User Name
           </Form.Label>
-          <Col sm={10}>
-            <Form.Control
-              placeholder="Your Name"
-              type="text"
-              name="name"
-              id="name"
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </Col>
+          <Form.Control
+            placeholder="Your Name"
+            type="text"
+            name="name"
+            id="name"
+            onChange={(e) => setUsername(e.target.value)}
+          />
         </Form.Group>
-        <Form.Group as={Row}>
-          <Form.Label column sm={2}>
+        <Form.Group >
+          <Form.Label >
             Password
           </Form.Label>
-          <Col sm={10}>
-            <Form.Control
-              type="password"
-              placeholder="Password"
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
-            />
-          </Col>
+          <Form.Control
+            type="password"
+            placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
+          />
         </Form.Group>
-        <Form.Group as={Row}>
-          <Form.Label column sm={2}>
+        <Form.Group >
+          <Form.Label >
             RePassword
           </Form.Label>
-          <Col sm={10}>
-            <Form.Control
-              type="password"
-              name="password"
-              id="repassword"
-              onChange={(e) => setRepassword(e.target.value)}
-            />
-          </Col>
+          <Form.Control
+            type="password"
+            name="password"
+            id="repassword"
+            onChange={(e) => setRepassword(e.target.value)}
+          />
         </Form.Group>
         <Form.Group as={Row}>
           <Col sm={{ span: 10, offset: 2 }}>
