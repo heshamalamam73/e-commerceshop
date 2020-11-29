@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { AiOutlineSearch } from 'react-icons/ai'
+import { BsJustify, BsListUl } from 'react-icons/bs'
 
 import {
   Collapse,
@@ -11,7 +13,7 @@ import {
   NavLink,
 } from "reactstrap";
 import { useDispatch } from "react-redux";
-import { Container, Form, Row, FormControl, Button } from "react-bootstrap";
+import { Container, Form, Row, FormControl, Button, NavDropdown } from "react-bootstrap";
 import { FaShoppingCart } from 'react-icons/fa'
 import Topnav from "./screens/Topnav";
 
@@ -38,60 +40,59 @@ function Header(props) {
     e.preventDefault();
     dispatch(signout());
   };
+  const handleShowNav = () => {
+    document.getElementById('navitems').style.display = "block"
+  }
+
   return (
-    <Navbar bg="light" expand="lg" light sticky='bottom'  >
-
-      <span style={{ fontSize: '23px', cursor: 'pointer', padding: '0 20px' }} onClick={handleopen}> &#9776; </span>
-
-
-      <NavbarBrand href="/">Let's Shopping</NavbarBrand>
-      <NavbarToggler onClick={toggle} />
-      <Collapse isOpen={isOpen} navbar>
-        <Nav className="ml-auto" navbar>
-          <input type="text" placeholder="Cerca Per Prodetto , Modello , Brand" className="nav-search" />
-
-          {isAuhenticated ? (
+    <div>
+      <Navbar expand="md" color="dark" dark fixed='top' style={{ zIndex: '40000' }}>
+        <BsJustify style={{ margin: "5px ", fontSize: "30px", padding: '5px', cursor: 'pointer', color: '#eee', backgroundColor: 'black' }} onClick={handleopen} />
+        <NavbarBrand href="/">
+          Let's Shopping
+        </NavbarBrand>
+        <NavbarToggler onClick={toggle} dark="true" />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="ml-auto" navbar>
             <NavItem>
-              <Link className="nav-link" onClick={handlelogout}>
-                Log Out
-              </Link>
+              <NavLink href="/">Home</NavLink>
             </NavItem>
-          ) : (
+            {isAuhenticated ? (
               <NavItem>
-                <Link className="nav-link" to="/signin">
-                  Accedi
-              </Link>
+                <Link className="nav-link" onClick={handlelogout}>
+                  Log Out
+                </Link>
               </NavItem>
-            )}
-          <NavItem>
-            <NavLink href="/storys">Store</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="/cart">
-
-              <span
-                className={
-                  active ? "active" : ""
-                }
-              >
-                Carrello
-                <FaShoppingCart />
-                <sup>{props.cartItems.length}</sup>
-
-              </span>
-            </NavLink>
-          </NavItem>
-
-          {user.isAdmin ? (
+            ) : (
+                <NavItem>
+                  <Link className="nav-link" to="/signin">
+                    Sign in
+                </Link>
+                </NavItem>
+              )}
+            {user.isAdmin ? (
+              <NavItem>
+                <Link className="nav-link" to="/products">
+                  Admin
+                </Link>
+              </NavItem>
+            ) : null}
             <NavItem>
-              <Link className="nav-link" to="/products">
-                Admin
+              <Link className="nav-link" to="/cart">
+                <FaShoppingCart className={
+                  active
+                    ? " active"
+                    : ""
+                } />
+                <sup>{props.cartItems.length}</sup>
               </Link>
             </NavItem>
-          ) : null}
-        </Nav>
-      </Collapse>
-    </Navbar>
+          </Nav>
+        </Collapse>
+      </Navbar>
+    </div>
   );
 }
+
+
 export default Header;
