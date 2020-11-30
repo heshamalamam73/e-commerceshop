@@ -46,7 +46,7 @@ export default class Carousel2 extends Component {
       ]
     };
     return (
-      <div className="slider">
+      <Container className="slider">
         <Slider {...settings}>
           <div>
             <img src={img1} />
@@ -65,7 +65,7 @@ export default class Carousel2 extends Component {
           </div>
 
         </Slider>
-      </div>
+      </Container>
     );
   }
 }

@@ -6,7 +6,7 @@ import img1 from '../../img/slid21.jpg'
 import img2 from '../../img/slid22.jpg'
 import img3 from '../../img/slid23.jpg'
 import img4 from '../../img/slid24.jpg'
-
+import { Container } from 'react-bootstrap'
 
 
 function Carousel3(props) {
@@ -71,7 +71,7 @@ function Carousel3(props) {
   };
 
   return (
-    <div className="slider3">
+    <Container className="slider3">
       <span>I più venduti</span>
 
       <Slider {...settings} className="">
@@ -103,7 +103,7 @@ function Carousel3(props) {
 
         </div> */}
       </Slider >
-    </div>
+    </Container>
   )
 }
 

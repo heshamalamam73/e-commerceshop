@@ -1,0 +1,43 @@
+.slider {
+  margin-top: 80px; }
+  .slider img {
+    width: 100%; }
+
+.slider2 {
+  height: 300px;
+  margin: 20px; }
+  .slider2 .slid-box {
+    background-color: antiquewhite; }
+    .slider2 .slid-box img {
+      max-height: 260px;
+      width: 100%; }
+
+.content-container .col {
+  padding: 20px; }
+
+.slider3 {
+  height: auto;
+  padding: 20px; }
+  .slider3 .slid-box {
+    border: 1px solid #eee;
+    padding: 0 20px;
+    min-height: 300px; }
+    .slider3 .slid-box img {
+      max-height: 200px;
+      width: 150px; }
+
+.blackfriday {
+  text-align: center;
+  padding: 10px; }
+  .blackfriday img {
+    width: 100%;
+    padding-bottom: 20px; }
+
+.prefooter {
+  text-align: center;
+  border: 1px solid #eee;
+  padding: 20px; }
+
+.footer {
+  padding: 20px;
+  min-height: 300px; }

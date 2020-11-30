@@ -43,7 +43,6 @@ function Header(props) {
   const handleShowNav = () => {
     document.getElementById('navitems').style.display = "block"
   }
-
   return (
     <div>
       <Navbar expand="md" color="dark" dark fixed='top' style={{ zIndex: '40000' }}>
@@ -93,6 +92,5 @@ function Header(props) {
     </div>
   );
 }
-
 
 export default Header;

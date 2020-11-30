@@ -4,7 +4,7 @@ import img1 from '../../img/slid21.jpg'
 import img2 from '../../img/slid22.jpg'
 import img3 from '../../img/slid23.jpg'
 import img4 from '../../img/slid24.jpg'
-
+import { Container } from 'react-bootstrap'
 
 function Carousel(props) {
   const settings = {
@@ -22,25 +22,28 @@ function Carousel(props) {
   };
 
   return (
-    <Slider {...settings} className="slider2">
+    <Container className="slider2">
+      <Slider {...settings} >
 
-      <div className="slid-box" style={{ width: 400 }} >
-        <img src={img1} />
+        <div className="slid-box" style={{ width: 400 }} >
+          <img src={img1} />
 
-      </div>
-      <div className="slid-box" style={{ width: 400 }}>
-        <img src={img2} />
+        </div>
+        <div className="slid-box" style={{ width: 400 }}>
+          <img src={img2} />
 
-      </div>
-      <div className="slid-box" style={{ width: 400 }}>
-        <img src={img3} />
+        </div>
+        <div className="slid-box" style={{ width: 400 }}>
+          <img src={img3} />
 
-      </div>
-      <div className="slid-box" style={{ width: 500 }}>
-        <img src={img4} />
+        </div>
+        <div className="slid-box" style={{ width: 500 }}>
+          <img src={img4} />
 
-      </div>
-    </Slider >
+        </div>
+      </Slider >
+    </Container>
+
   )
 }
 

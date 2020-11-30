@@ -1,12 +1,12 @@
 import React from 'react'
-import { Col, Row } from 'react-bootstrap'
+import { Col, Row, Container } from 'react-bootstrap'
 import { AiFillFacebook, AiFillTwitterCircle, AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { FaStackOverflow } from 'react-icons/fa'
 function Footer(props) {
 
 
   return (
-    <div className="footer" id="cantact">
+    <Container className="footer" id="cantact">
       <Row>
         <Col md={4} xs={12}>
           <span>ISCRIVITI ALLA NEWSLETTER</span>
@@ -30,7 +30,7 @@ function Footer(props) {
         </Col>
       </Row>
       <p> © 2020 . All Rights Reserved. Mahmoud Okily </p>
-    </div>
+    </Container>
   )
 
 }
