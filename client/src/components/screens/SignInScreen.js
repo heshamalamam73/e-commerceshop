@@ -60,25 +60,23 @@ function SignInScreen(props) {
             value={password}
           />
         </Form.Group>
-        <Form.Group>
-          <Button
-            style={{ margin: "10px" }}
-            type="submit"
-            onClick={submitHandler}
-          >
-            Log In            </Button>
-        </Form.Group>
-        <Form.Group >
 
-          <Link
-            to={
-              redirect === "/" ? "rigester" : "rigester?redirect=" + redirect
-            }
-            className="button full-width"
-          >
-            Create New acconut
+        <Button
+
+          type="submit"
+          onClick={submitHandler}
+        >
+          Log In            </Button>
+
+
+        <Link
+          to={
+            redirect === "/" ? "rigester" : "rigester?redirect=" + redirect
+          }
+        >
+          Create New acconut
             </Link>
-        </Form.Group>
+
       </Form>
     </Container >
   );

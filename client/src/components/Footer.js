@@ -11,10 +11,13 @@ function Footer(props) {
         <Col md={4} xs={12}>
           <span>ISCRIVITI ALLA NEWSLETTER</span>
           <input type="text" placeholder="Inserisci la tua email" />
+          <button className='btn btn-primary ' >Iscrivi</button>
+
         </Col>
         <Col md={4} xs={12}>
           <span>TROVA UN PUNTO VENDITA</span>
           <input type="text" placeholder="Città , regione" />
+          <button className='btn btn-primary'>Search</button>
 
         </Col>
         <Col md={4} xs={12}>

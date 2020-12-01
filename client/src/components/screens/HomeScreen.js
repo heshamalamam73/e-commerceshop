@@ -56,47 +56,44 @@ function HomeScreen(props) {
         </Row>
 
         <Row>
-          <Col>
+          <Col xs={6} md={4}>
             <h1>
-              {" "}
               <FaShoppingCart />
             </h1>
             <strong>Ritira</strong> in negozio
-            <p>
               Paga o ordina online e ritira i tuoi acquisti nel punto vendita
               più vicino a te, senza spese di spedizione.
-            </p>
+
           </Col>
-          <Col>
+          <Col xs={6} md={4}>
             <h1>
-              {" "}
               <FaShippingFast />
             </h1>
             <strong>SCEGLI</strong> LA TUA CONSEGNA Seleziona tra le nostre
             opzioni di consegna quella che preferisci.
           </Col>
-          <Col>
+          <Col xs={6} md={4}>
             <h1>
               <RiInstallLine />
             </h1>
             <strong>INSTALLAZIONE</strong> E ALTRI SERVIZI Richiedi i nostri
             servizi di consegna e installazione a domicilio.
           </Col>
-          <Col>
+          <Col xs={6} md={4}>
             <h1>
               <FaMoneyCheckAlt />
             </h1>
             <strong>FINANZIAMENTI </strong>
             Rimborsa i tuoi acquisti in comode rate mensili.
           </Col>
-          <Col>
+          <Col xs={6} md={4}>
             <h1>
               <FaAssistiveListeningSystems />
             </h1>
             <strong>ASSISTENZA</strong> AGGIUNTIVA Proteggi i tuoi acquisti con
             Rilassati e Smile Service.
           </Col>
-          <Col>
+          <Col xs={6} md={4}>
             <h1>
               <MdAssignmentReturn />
             </h1>

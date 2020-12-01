@@ -19,16 +19,15 @@ import Topnav from "./screens/Topnav";
 
 function Header(props) {
   const dispatch = useDispatch();
+  const [show, setShow] = useState(true)
 
   const handleopen = () => {
+    setShow(!show)
     const nav = document.getElementById("mySidenav")
-    nav.style.width = "300px";
-  }
-  const handleclose = () => {
-    const nav = document.getElementById("mySidenav")
-    nav.style.width = "0px";
+    show ? nav.style.width = "300px" : nav.style.width = "0px"
 
   }
+
 
   const [isOpen, setIsOpen] = useState(false);
   const active = props.cartItems.length > 0 ? true : false;

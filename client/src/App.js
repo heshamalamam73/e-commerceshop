@@ -6,12 +6,10 @@ import { Container } from 'react-bootstrap'
 import './css/main.css'
 function App() {
   return (
-    <Container className="" id="app">
-
+    <div className="app" id="app">
       <Main />
       <Footer />
-
-    </Container>
+    </div>
   );
 }
 
