@@ -53,8 +53,10 @@ function Header(props) {
 
         <li><Link to='/cart'><AiOutlineShoppingCart /></Link></li>
 
-
-        <BsJustify style={{ margin: "5px ", fontSize: "50px", padding: '5px', cursor: 'pointer', color: '#eee', }} onClick={handleopen} />
+        <li>
+          <a href="#">           <BsJustify onClick={handleopen} />
+          </a>
+        </li>
       </ul>
     </section>
   );
