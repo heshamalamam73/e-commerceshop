@@ -6,7 +6,7 @@ function Footer(props) {
 
 
   return (
-    <Container className="footer" id="cantact">
+    <section className='footer'>
       <Row>
         <Col md={4} xs={12}>
           <span>ISCRIVITI ALLA NEWSLETTER</span>
@@ -33,7 +33,7 @@ function Footer(props) {
         </Col>
       </Row>
       <p> © 2020 . All Rights Reserved. Mahmoud Okily </p>
-    </Container>
+    </section>
   )
 
 }

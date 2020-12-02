@@ -21,14 +21,14 @@ function Main() {
   const { cartItems } = cart;
 
   return (
-    <Router>
+    <Router className='router'>
       <LeftNav />
-      <Header
+      {/* <Header
         cartItems={cartItems}
         signout={signout}
         isAuhenticated={isAuhenticated}
         user={user}
-      />
+      /> */}
       <Route path='/' component={HomeScreen} exact={true} />
       <Route path="/allproducts" component={Products} exact={true} />
       <Route path="/signin" component={SignInScreen} exact={true} />

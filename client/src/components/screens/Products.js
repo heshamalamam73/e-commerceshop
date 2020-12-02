@@ -26,7 +26,7 @@ function Products(props) {
   ) : error ? (
     <div>Error...</div>
   ) : (
-        <Container className="campgrounds">
+        <Container className="products">
           <Row>
             {products &&
               products.map((product) => (

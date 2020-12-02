@@ -72,12 +72,15 @@ function Carousel3(props) {
 
   return (
     <Container className="slider3">
-      <span>I più venduti</span>
+      <h2>I più venduti</h2>
 
       <Slider {...settings} className="">
         {productsList.map(product => (
           <div className="slid-box" style={{ width: 200 }} kay={product._id}>
-            <img src={product.product_image} class="hastooltip" />
+            <div className="img">
+              <img src={product.product_image} class="hastooltip" />
+
+            </div>
             <div>
               <span>{product.product_category}</span>
               <h5>{product.product_name} </h5>

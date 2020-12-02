@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { AiOutlineSearch } from 'react-icons/ai'
+import { AiOutlineSearch, AiOutlineShoppingCart, AiOutlineUser, AiFillHeart } from 'react-icons/ai'
 import { BsJustify, BsListUl } from 'react-icons/bs'
 
 import {
@@ -29,11 +29,11 @@ function Header(props) {
   }
 
 
-  const [isOpen, setIsOpen] = useState(false);
-  const active = props.cartItems.length > 0 ? true : false;
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
+  // const [isOpen, setIsOpen] = useState(false);
+  // const active = props.cartItems.length > 0 ? true : false;
+  // const toggle = () => {
+  //   setIsOpen(!isOpen);
+  // };
   const { signout, isAuhenticated, user } = props;
   const handlelogout = (e) => {
     e.preventDefault();
@@ -43,52 +43,20 @@ function Header(props) {
     document.getElementById('navitems').style.display = "block"
   }
   return (
-    <div>
-      <Navbar expand="md" color="dark" dark fixed='top' style={{ zIndex: '40000' }}>
-        <BsJustify style={{ margin: "5px ", fontSize: "30px", padding: '5px', cursor: 'pointer', color: '#eee', backgroundColor: 'black' }} onClick={handleopen} />
-        <NavbarBrand href="/">
-          Let's Shopping
-        </NavbarBrand>
-        <NavbarToggler onClick={toggle} dark="true" />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink href="/">Home</NavLink>
-            </NavItem>
-            {isAuhenticated ? (
-              <NavItem>
-                <Link className="nav-link" onClick={handlelogout}>
-                  Log Out
-                </Link>
-              </NavItem>
-            ) : (
-                <NavItem>
-                  <Link className="nav-link" to="/signin">
-                    Sign in
-                </Link>
-                </NavItem>
-              )}
-            {user.isAdmin ? (
-              <NavItem>
-                <Link className="nav-link" to="/products">
-                  Admin
-                </Link>
-              </NavItem>
-            ) : null}
-            <NavItem>
-              <Link className="nav-link" to="/cart">
-                <FaShoppingCart className={
-                  active
-                    ? " active"
-                    : ""
-                } />
-                <sup>{props.cartItems.length}</sup>
-              </Link>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </div>
+    <section className='header'>
+      <div className="navTitle">
+        <span><Link to='/'>Let's Shopping</Link></span>
+      </div>
+      <ul className="navItems">
+        <li><Link to='/signin'> <AiOutlineUser /></Link></li>
+        <li><Link to='/liked'><AiFillHeart /></Link></li>
+
+        <li><Link to='/cart'><AiOutlineShoppingCart /></Link></li>
+
+
+        <BsJustify style={{ margin: "5px ", fontSize: "50px", padding: '5px', cursor: 'pointer', color: '#eee', }} onClick={handleopen} />
+      </ul>
+    </section>
   );
 }
 
