@@ -271,11 +271,9 @@ span {
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media (max-width: 599px) {
-  .header .navTitle {
-    font-size: 2px !important; }
-    .header .navTitle a {
-      text-decoration: none;
-      padding: 0; }
+  .header .navTitle a {
+    text-decoration: none;
+    padding: 0; }
   .header .navItems li {
     padding: 10px;
     list-style: none;
@@ -301,7 +299,17 @@ span {
     .products .row .col-xs-12 {
       flex-direction: row !important;
       flex-wrap: wrap;
-      display: flex; } }
+      display: flex; }
+  footer {
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box; }
+    footer span {
+      font-size: 10px; }
+    footer h4 {
+      font-size: 10px; }
+    footer a {
+      font-size: 10px; } }
 
 @media (min-width: 500px) and (max-width: 1200px) {
   .body .part1 {

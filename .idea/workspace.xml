@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e895d4b-299f-4792-bbe0-7beec03269a2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/LeftNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LeftNav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/screens/CartScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/screens/CartScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/screens/HomeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/screens/ProductItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/screens/ProductItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/screens/ProductScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/screens/ProductScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/screens/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/screens/Products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/screens/SignInScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/screens/SignInScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scss/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +89,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607188501353</updated>
-      <workItem from="1607188504827" duration="15744000" />
+      <workItem from="1607188504827" duration="16769000" />
     </task>
     <servers />
   </component>

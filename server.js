@@ -14,6 +14,7 @@ import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 var passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
+import path from "path";
 
 dotenv.config();
 
