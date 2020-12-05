@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart, removeFromCart } from "../../redux/actions/cartActions";
 import { Link } from "react-router-dom";
-
-import { Jumbotron, Container } from "react-bootstrap";
+import { Jumbotron,Row,Col, Container } from "react-bootstrap";
 
 function CartScreen(props) {
   const cart = useSelector((state) => state.cart);
@@ -37,71 +36,86 @@ function CartScreen(props) {
       </Container>
     </Jumbotron>
   ) : (
-    <Container className="cart-screen">
-      <div className="cart-items-list">
-        {cartItems.map((item, index) => (
-          <div className="cart-item-list">
-            <div className="item-img">
-              <Link to={"/products/" + item.product}>
-                {" "}
-                <img src={item.image} alt="item" />
-              </Link>
-            </div>
-            <div className="item-details">
-              <h2 className="item-name">
-                <Link to={"/products/" + item.product}>{item.name}</Link>
-              </h2>
-              <span className="item status">
+      <Row className="cart-screen">
+
+          <Col xs={12} md={8} className="cart-item-list">
+            {cartItems.map((item, index) => (
+
+                <Row>
+              <Col>
+                <div className="item-img">
+                  <Link to={"/products/" + item.product}>
+                    <img src={item.image} alt="item" />
+                  </Link>
+                </div>
+
+              </Col>
+              <Col>
+                <h2 className="item-name">
+                  <Link to={"/products/" + item.product}>{item.name}</Link>
+                </h2>
+                <span className="item status">
                 {item.countInStock > 0 ? "Disponible" : "finished"}
               </span>
-              <div className="item-control">
-                <div className="qty">
-                  <label htmlFor="qty"> qty :</label>
-                  <select
-                    id="qty"
-                    value={item.qty}
-                    onChange={(e) =>
-                      dispatch(addToCart(item.product, e.target.value))
-                    }
-                  >
-                    {[...Array(item.countInStock).keys()].map((x) => (
-                      <option value={x + 1} key={x + 1}>
-                        {x + 1}
-                      </option>
-                    ))}
-                  </select>
-                  <div className="button">
-                    <button
-                      type="button"
-                      onClick={() => removeFromCartHandler(item.product)}
+              </Col>
+              <Col>
+                <div className="item-control">
+                  <div className="qty">
+                    <label htmlFor="qty"> qty :</label>
+                    <select
+                        id="qty"
+                        value={item.qty}
+                        onChange={(e) =>
+                            dispatch(addToCart(item.product, e.target.value))
+                        }
                     >
-                      Remove
-                    </button>
+                      {[...Array(item.countInStock).keys()].map((x) => (
+                          <option value={x + 1} key={x + 1}>
+                            {x + 1}
+                          </option>
+                      ))}
+                    </select>
+                    <div className="button">
+                      <button
+                          type="button"
+                          onClick={() => removeFromCartHandler(item.product)}
+                      >
+                        Remove
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="item-price">
-              <span>Price</span>
-              <h1 className="item-price">{item.price}$</h1>
-            </div>
+
+              </Col>
+              <Col>
+                <div className="item-price">
+                  <span>Price</span>
+                  <h1 className="item-price">{item.price}$</h1>
+                </div>
+              </Col>
+            </Row>
+
+            ))}
+          </Col>
+        <Col md={4} className="cart-action-box">
+          <div >
+            <h1>Total items : {cartItems.reduce((a, c) => a + c.qty, 0)} item </h1>
+            <h1>
+              Total price: {cartItems.reduce((a, c) => a + c.price * c.qty, 0)} $
+            </h1>
+            <button
+                onClick={chickoutHandler}
+                className="button primary full-width"
+                disabled={cartItems.length === 0}
+            >
+              proceed to checkout
+            </button>
           </div>
-        ))}
-      </div>
-      <div className="cart-action-box">
-        <h1>Total items : {cartItems.reduce((a, c) => a + c.qty, 0)} item </h1>
-        <h1>
-          Total price: {cartItems.reduce((a, c) => a + c.price * c.qty, 0)} $
-        </h1>
-        <button
-          onClick={chickoutHandler}
-          className="button primary full-width"
-          disabled={cartItems.length === 0}
-        >
-          proceed to checkout
-        </button>
-      </div>
-    </Container>
+        </Col>
+
+
+      </Row>
+
   );
 }
 export default CartScreen;

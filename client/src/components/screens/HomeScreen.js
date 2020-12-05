@@ -7,6 +7,8 @@ import Carousel2 from "./carousel2";
 import Carousel3 from "./carousel3";
 import img1 from "../../img/slid1.jpg";
 import Topnav from "./Topnav.js";
+import { motion } from "framer-motion";
+import {backVariants , imageVariants, frameVariants, thumbnailVariants , transition} from "./setting";
 import {
   FaShippingFast,
   FaShoppingCart,
@@ -19,7 +21,10 @@ import SignInScreen from "./SignInScreen";
 import ContainerBox from "./Contaier";
 function HomeScreen(props) {
   return (
-    <section className='body'>
+      <section className='body'>
+
+
+
       <div className="part1">
         <div className='text-left'>
           <h1>
@@ -60,7 +65,9 @@ function HomeScreen(props) {
 
       </div>
 
-    </section>
+
+      </section>
+
   );
 }
 export default HomeScreen;

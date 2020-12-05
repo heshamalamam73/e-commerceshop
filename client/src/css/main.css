@@ -1,4 +1,5 @@
 .sidenav {
+  box-shadow: 3px 3px #eee, -1em 0 0.4em #eee;
   height: 100%;
   /* 100% Full-height */
   width: 0;
@@ -10,8 +11,8 @@
   top: 0;
   /* Stay at the top */
   left: 0;
-  background-color: #111;
   /* Black*/
+  background: white;
   overflow-x: hidden;
   /* Disable horizontal scroll */
   padding-top: 60px;
@@ -45,9 +46,7 @@
   transition: margin-left .5s; }
 
 .app {
-  color: aliceblue;
-  min-height: 100vh !important;
-  background-color: black; }
+  min-height: 100vh !important; }
 
 img {
   max-width: 100%; }
@@ -62,7 +61,8 @@ h5,
 h6,
 li,
 span {
-  color: aliceblue !important; }
+  color: #111111 !important;
+  text-decoration: none !important; }
 
 .body {
   width: 100%;
@@ -71,13 +71,13 @@ span {
   .body .part1 {
     height: 100vh;
     display: flex;
-    align-items: center;
-    justify-items: center;
+    align-items: flex-start;
+    justify-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between; }
     .body .part1 .text-left {
-      padding: 0px 30px;
+      padding: 40px 30px;
       flex-shrink: 1; }
       .body .part1 .text-left h1 {
         font-size: 8rem; }
@@ -85,22 +85,20 @@ span {
         font-size: 3rem;
         padding-bottom: 20px; }
       .body .part1 .text-left a {
-        border: none;
         outline: none;
         text-decoration: none;
-        background-color: #000000;
-        color: aliceblue;
         box-shadow: .3px .4px 1px 2px white;
         padding: 10px 40px;
-        border-radius: 9px; }
+        border-radius: 9px;
+        color: #111111;
+        border: 1px solid #818181; }
     .body .part1 .img {
       flex-shrink: 0;
       padding: 20px;
       width: 50%; }
   .body .part2 {
     min-height: 50vh;
-    padding: 0px 30px;
-    padding-bottom: 30px; }
+    padding: 0px 30px; }
     .body .part2 h1 {
       text-align: center;
       padding-bottom: 29px;
@@ -133,13 +131,11 @@ span {
       text-align: left;
       max-width: 100%; }
       .body .part4 .slider3 h2 {
-        font-size: 3rem;
-        color: aliceblue; }
+        font-size: 3rem; }
     .body .part4 .slid-box {
       padding: 0px 30px;
       min-height: 360px;
       background-color: white;
-      color: #000000 !important;
       box-shadow: .3px .4px 1px 2px black; }
       .body .part4 .slid-box .img {
         min-height: 200px; }
@@ -149,13 +145,12 @@ span {
     .body .part4 span,
     .body .part4 h5,
     .body .part4 h6 {
-      text-align: left;
-      color: #000000 !important; }
+      text-align: left; }
 
 .header {
+  background: white;
   z-index: 5000;
   height: 60px;
-  background-color: black;
   display: flex;
   width: 100%;
   align-items: center;
@@ -163,7 +158,7 @@ span {
   padding: 20px;
   position: fixed; }
   .header .navTitle {
-    font-size: 2rem;
+    font-size: 10px;
     font-weight: 500; }
     .header .navTitle a {
       text-decoration: none; }
@@ -177,7 +172,7 @@ span {
       list-style: none; }
       .header .navItems li a {
         text-decoration: none;
-        font-size: 3rem; }
+        font-size: 20px; }
 
 .footer {
   min-height: 350px;
@@ -192,8 +187,7 @@ span {
     .footer .row span {
       font-size: 2rem; }
     .footer .row a {
-      font-size: 3rem;
-      color: #eee; }
+      font-size: 3rem; }
     .footer .row input,
     .footer .row button {
       display: block;
@@ -202,13 +196,12 @@ span {
 
 .sign {
   min-height: 80vh;
-  color: #f1f1f1;
   max-width: 100vw; }
   .sign .signBox {
     max-width: 100vw;
     padding: 40px;
     min-height: 50vh;
-    background-color: #111;
+    border: 1px solid #eee;
     border-radius: 20px;
     max-width: 100vw;
     margin: 0 auto; }
@@ -220,25 +213,76 @@ span {
     display: block;
     margin: 10px 0px; }
 
+.cart-screen {
+  padding: 40px; }
+  .cart-screen .cart-action-box {
+    background-color: #eee;
+    padding: 20px; }
+  .cart-screen .cart-item-list {
+    padding: 10px;
+    background-color: #eee;
+    flex-direction: column !important; }
+    .cart-screen .cart-item-list .item-img {
+      height: 100px;
+      padding: 10px;
+      margin: 10px; }
+      .cart-screen .cart-item-list .item-img img {
+        max-height: 100%; }
+
 .products .row {
   padding: 10px; }
   .products .row .col-lg-4 {
     padding: 10px; }
+    .products .row .col-lg-4 span {
+      display: block; }
+    .products .row .col-lg-4 .productForm {
+      padding: 10px;
+      display: flex;
+      text-align: center;
+      margin: 0 auto;
+      justify-content: center; }
+      .products .row .col-lg-4 .productForm button {
+        padding: 0px 20px;
+        border: 1px solid #818181;
+        background-color: white; }
+      .products .row .col-lg-4 .productForm .input {
+        font-size: 6px;
+        height: 30px; }
+
+.spinner {
+  position: relative;
+  top: 30vh;
+  padding: 0px;
+  transform: translate(50%, 50%); }
+
+.product-screen {
+  padding: 20px; }
+  .product-screen .product-screen-action-box ul {
+    list-style: none;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px; }
+    .product-screen .product-screen-action-box ul li {
+      padding: 5px 0px; }
+      .product-screen .product-screen-action-box ul li button {
+        padding: 5px 40px;
+        color: white;
+        background-color: black;
+        border-radius: 5px; }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media (max-width: 599px) {
   .header .navTitle {
-    font-size: 1rem;
-    font-weight: 500; }
+    font-size: 2px !important; }
     .header .navTitle a {
-      text-decoration: none; }
+      text-decoration: none;
+      padding: 0; }
   .header .navItems li {
     padding: 10px;
     list-style: none;
-    cursor: 'pointer';
-    color: "#eee" a;
-      color-text-decoration: none;
-      color-font-size: 2rem; }
+    cursor: pointer; }
+    .header .navItems li a {
+      text-decoration: none;
+      font-size: 2rem; }
   .sidenav {
     padding-top: 15px; }
   .sidenav a {

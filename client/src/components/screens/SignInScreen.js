@@ -5,7 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { signin } from "../../redux/actions/userAction";
 import { Table, Button, Form, Row, Col, Container } from "react-bootstrap";
 import { Alert } from "reactstrap";
+
 import ChickOutSteps from "../ChickOutSteps";
+import {motion} from "framer-motion";
 function SignInScreen(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -30,8 +32,18 @@ function SignInScreen(props) {
   };
 
   return (
-    <Container className="sign">
-      {/* <ChickOutSteps step1></ChickOutSteps> */}
+
+
+      <Container className="sign">
+        <motion.div
+            className="thumbnails"
+            initial="initial"
+            animate="enter"
+            exit="exit"
+            variants={{ exit: { transition: { staggerChildren: 0.1 } } }}
+        >
+
+        {/* <ChickOutSteps step1></ChickOutSteps> */}
       <Form onSubmit={submitHandler} className="signBox">
         <h2>Log In</h2>
         <hr />
@@ -78,7 +90,10 @@ function SignInScreen(props) {
             </Link>
 
       </Form>
-    </Container >
+        </motion.div>
+
+      </Container >
+
   );
 }
 export default SignInScreen;

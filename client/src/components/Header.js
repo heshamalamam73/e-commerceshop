@@ -45,7 +45,7 @@ function Header(props) {
   return (
     <section className='header'>
       <div className="navTitle">
-        <span><Link to='/'>Let's Shopping</Link></span>
+        <Link to='/' >Let's Shopping</Link>
       </div>
       <ul className="navItems">
         <li><Link to='/signin'> <AiOutlineUser /></Link></li>
@@ -61,5 +61,6 @@ function Header(props) {
     </section>
   );
 }
+
 
 export default Header;

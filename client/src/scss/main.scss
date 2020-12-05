@@ -120,6 +120,8 @@
     // }
     // // left navbar style 
     .sidenav {
+        box-shadow: 3px 3px #eee, -1em 0 0.4em #eee;
+
         height: 100%;
         /* 100% Full-height */
         width: 0;
@@ -131,8 +133,8 @@
         top: 0;
         /* Stay at the top */
         left: 0;
-        background-color: #111;
         /* Black*/
+        background: white;
         overflow-x: hidden;
         /* Disable horizontal scroll */
         padding-top: 60px;
@@ -171,9 +173,8 @@
     }
     
     .app {
-        color: aliceblue;
         min-height: 100vh!important;
-        background-color: adjust-hue($color: #000000, $degrees: 0);
+        //background-color: adjust-hue($color: #000000, $degrees: 0);
     }
     
     img {
@@ -190,7 +191,8 @@
     h6,
     li,
     span {
-        color: aliceblue!important;
+        color: #111111!important;
+        text-decoration: none!important;
     }
     
     .body {
@@ -200,13 +202,13 @@
         .part1 {
             height: 100vh;
             display: flex;
-            align-items: center;
-            justify-items: center;
+            align-items: flex-start;
+            justify-items: flex-start;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
             .text-left {
-                padding: 0px 30px;
+                padding: 40px 30px;
                 flex-shrink: 1;
                 h1 {
                     font-size: 8rem;
@@ -216,14 +218,13 @@
                     padding-bottom: 20px;
                 }
                 a {
-                    border: none;
                     outline: none;
                     text-decoration: none;
-                    background-color: #000000;
-                    color: aliceblue;
                     box-shadow: .3px .4px 1px 2px white;
                     padding: 10px 40px;
                     border-radius: 9px;
+                    color: #111111;
+                    border: 1px solid #818181;
                 }
             }
             .img {
@@ -236,7 +237,6 @@
         .part2 {
             min-height: 50vh;
             padding: 0px 30px;
-            padding-bottom: 30px;
             h1 {
                 text-align: center;
                 padding-bottom: 29px;
@@ -276,14 +276,12 @@
                 max-width: 100%;
                 h2 {
                     font-size: 3rem;
-                    color: aliceblue;
                 }
             }
             .slid-box {
                 padding: 0px 30px;
                 min-height: 360px;
                 background-color: white;
-                color: #000000!important;
                 box-shadow: .3px .4px 1px 2px black;
                 .img {
                     min-height: 200px;
@@ -297,15 +295,15 @@
             h5,
             h6 {
                 text-align: left;
-                color: #000000!important;
             }
         }
     }
     
     .header {
+        background: white;
+
         z-index: 5000;
         height: 60px;
-        background-color: black;
         display: flex;
         width: 100%;
         align-items: center;
@@ -313,7 +311,7 @@
         padding: 20px;
         position: fixed;
         .navTitle {
-            font-size: 2rem;
+            font-size: 10px;
             font-weight: 500;
             a {
                 text-decoration: none;
@@ -329,7 +327,7 @@
                 list-style: none;
                 a {
                     text-decoration: none;
-                    font-size: 3rem;
+                    font-size: 20px;
                 }
             }
         }
@@ -350,7 +348,6 @@
             }
             a {
                 font-size: 3rem;
-                color: #eee;
             }
             input,
             button {
@@ -363,13 +360,12 @@
     
     .sign {
         min-height: 80vh;
-        color: #f1f1f1;
         max-width: 100vw;
         .signBox {
             max-width: 100vw;
             padding: 40px;
             min-height: 50vh;
-            background-color: #111;
+            border: 1px solid #eee;
             border-radius: 20px;
             max-width: 100vw;
             margin: 0 auto;
@@ -384,12 +380,92 @@
             margin: 10px 0px;
         }
     }
+    .cart-screen{
+        padding: 40px;
+        .cart-action-box{
+            background-color: #eee;
+            padding: 20px;
+        }
+        .cart-item-list{
+            padding: 10px;
+            background-color: #eee;
+
+            flex-direction: column!important;
+            .item-img{
+                  height: 100px;
+                  padding: 10px;
+                margin: 10px;
+    img{
+        max-height: 100%;
+
+    }
+
+}
+
+
+        }
+
+
+    }
     
     .products {
         .row {
             padding: 10px;
             .col-lg-4 {
                 padding: 10px;
+                span{
+                    display: block;
+                }
+                .productForm {
+                    padding: 10px;
+
+                    display:flex;
+                    text-align: center;
+                    margin: 0 auto;
+                    justify-content: center;
+                    button{
+                        padding: 0px 20px;
+                        border:1px solid #818181;
+                        background-color: white;
+
+                    }
+                    .input{
+                        //margin: 10px;
+                        font-size: 6px;
+                        height: 30px;
+
+
+
+                    }
+                }
+
+            }
+        }
+    }
+    .spinner{
+        position: relative;
+        top: 30vh;
+        padding: 0px;
+        transform: translate(50%,50%);
+    }
+    .product-screen {
+        padding: 20px;
+
+        .product-screen-action-box{
+            ul{
+                list-style: none;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 20px;
+                li{
+                    padding:5px 0px;
+                    button{
+                        padding: 5px 40px;
+                        color: white;
+                        background-color: black;
+                        border-radius: 5px;
+                    }
+                }
+
             }
         }
     }
@@ -398,18 +474,18 @@
     @media (max-width: 599px) {
         .header {
             .navTitle {
-                font-size: 1rem;
-                font-weight: 500;
+                font-size: 2px!important;
                 a {
                     text-decoration: none;
+                    padding: 0;
                 }
             }
             .navItems {
                 li {
                     padding: 10px;
                     list-style: none;
-                    cursor: 'pointer';
-                    color: '#eee' a {
+                    cursor: pointer;
+                    a {
                         text-decoration: none;
                         font-size: 2rem;
                     }
