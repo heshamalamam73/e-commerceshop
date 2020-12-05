@@ -15,7 +15,7 @@ const require = createRequire(import.meta.url);
 var passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 import path from "path";
-
+const __dirname = path.resolve();
 dotenv.config();
 
 const app = express();
