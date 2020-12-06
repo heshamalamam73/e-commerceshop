@@ -239,17 +239,22 @@
             padding: 0px 30px;
             h1 {
                 text-align: center;
-                padding-bottom: 29px;
+                //padding-bottom: 29px;
                 font-size: 4rem;
                 text-transform: capitalize;
             }
         }
         .part3 {
             text-align: center;
-            min-height: 70vh;
+            min-height: 80vh;
+            padding: 20px;
+            h1{
+                padding: 20px 0px;
+                border: 1px solid #eee;
+            }
             .boxes {
                 display: flex;
-                min-height: 900px;
+                min-height: 1000px;
                 justify-content: space-evenly;
                 justify-items: center;
                 align-items: center;
@@ -337,6 +342,7 @@
         min-height: 350px;
         padding: 30px;
         text-align: center;
+        border-top: 2px solid #eee;
         .row {
             text-align: left;
             text-align: center;
@@ -467,6 +473,164 @@
                 }
 
             }
+        }
+    }
+    .checkout-steps {
+        display: flex;
+        justify-content: space-between;
+        width: 40rem;
+        max-width: 100%;
+        margin: 1rem auto;
+        div {
+            border-top: 0.3rem #c0c0c0 solid;
+            color: #c0c0c0;
+            flex: 1 1;
+        }
+        div.active {
+            border-top: 0.3rem #f08000 solid;
+            color: #f08000;
+        }
+    }
+    .placeorder-screen {
+        display: flex;
+        flex-direction: row;
+        max-width: 100%;
+        flex-wrap: wrap;
+        min-height: 100vh;
+        .placeorder-details {
+            padding: 20px;
+            flex-grow: 1;
+            flex-basis: 800px;
+
+            .list-items {
+                padding: 0 20px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                max-width: 100%;
+                min-height: 100px;
+                justify-content: flex-start;
+                padding-bottom: 10px;
+                .cart-item-list {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    width: 100%;
+                    min-height: 100px;
+                    justify-content: flex-start;
+                    border-bottom: 1px solid #eee;
+                    padding-bottom: 10px;
+                    .item-img {
+                        width: 100%;
+                        flex-basis: 200px;
+                        padding: 10px 0;
+
+                        img {
+                            max-width: 100%;
+                            max-height: 100px;
+                        }
+                    }
+                    .item-details {
+                        flex-basis: 600px;
+                        flex-grow: 1;
+                        padding: 20px;
+                        h2 {
+                            font-size: 20px;
+                        }
+                        .item-control {
+                            width: 100%;
+                            .qty {
+                                width: 100%;
+                                display: flex;
+                                justify-content: flex-start;
+                                flex-direction: row;
+                                text-align: center;
+                                align-items: center;
+                                flex-wrap: nowrap;
+                            }
+                        }
+                    }
+                }
+            }
+            .shipping-info {
+                text-transform: capitalize;
+                background-color: #eee;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                button {
+                    margin: 10px auto;
+                    align-items: center;
+                    width: 60%;
+                    outline: none;
+                    border: none;
+                    background-color: #f08000;
+                    border-radius: 3px;
+                    padding: 10px 0px;
+                    opacity: 0.9;
+                }
+                button:hover {
+                    opacity: 1;
+                }
+
+                h1 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .placeorder-action {
+        height: 800px;
+        max-height: auto;
+        margin: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        min-width: 250px;
+        flex-basis: 200px;
+        background-color: #e3e3e3;
+        padding: 30px;
+        .action-box {
+            margin-bottom: 40px;
+            p:last-child {
+                border-top: 3px solid #203040;
+                padding: 10px;
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+        }
+        .shipping-info {
+            font-family: Arial, sans-serif;
+            text-transform: capitalize;
+            display: flex;
+            flex-direction: column;
+            .title {
+                text-align: center;
+                border-top: 1px solid #eee;
+                padding: 20px 0;
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+            button {
+                background-color: #203040;
+                color: white;
+            }
+        }
+        button {
+            text-transform: capitalize;
+            margin: 10px auto;
+            align-items: center;
+            width: 60%;
+            outline: none;
+            border: none;
+            background-color: #f08000;
+            border-radius: 3px;
+            padding: 10px 0px;
+            opacity: 0.9;
+        }
+        button:hover {
+            opacity: 1;
         }
     }
     /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
