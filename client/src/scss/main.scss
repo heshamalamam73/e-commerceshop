@@ -366,17 +366,13 @@
     
     .sign {
         min-height: 80vh;
-        max-width: 100vw;
+        box-sizing: border-box;
 
         .signBox {
+            width: 400px;
             padding: 40px;
-            width: 450px;
-            max-width: 100vw;
-
             min-height: 50vh;
             border: 1px solid #eee;
-            border-radius: 20px;
-            max-width: 100vw;
 
             justify-self: center;
             justify-items: center;
@@ -446,9 +442,9 @@
 
     }
     .form-screen {
-        width: auto;
+        width: 350px;
         height: auto;
-        max-width: 50rem;
+        max-width: 100vw;
         justify-self: center;
         justify-items: center;
         margin: 30px auto;
@@ -678,6 +674,11 @@
     /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
     
     @media (max-width: 599px) {
+        .sign{
+            width: 100vw;
+            max-width: 100vw;
+            padding: 20px;
+        }
         .header {
             .navTitle {
 
