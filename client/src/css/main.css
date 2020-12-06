@@ -189,9 +189,9 @@ span {
     justify-content: center;
     margin: 0 auto; }
     .footer .row span {
-      font-size: 2rem; }
+      font-size: 20px; }
     .footer .row a {
-      font-size: 3rem; }
+      font-size: 20px; }
     .footer .row input,
     .footer .row button {
       display: block;
@@ -202,13 +202,18 @@ span {
   min-height: 80vh;
   max-width: 100vw; }
   .sign .signBox {
-    max-width: 100vw;
     padding: 40px;
+    width: 450px;
+    max-width: 100vw;
     min-height: 50vh;
     border: 1px solid #eee;
     border-radius: 20px;
     max-width: 100vw;
-    margin: 0 auto; }
+    justify-self: center;
+    justify-items: center;
+    margin: 30px auto;
+    padding: 30px;
+    box-shadow: 0px 0px 3px 3px #343a40; }
     .sign .signBox input {
       padding: 15px; }
   .sign button {
@@ -218,20 +223,48 @@ span {
     margin: 10px 0px; }
 
 .cart-screen {
-  padding: 40px; }
+  padding: 0 40px;
+  margin: 20px; }
   .cart-screen .cart-action-box {
+    height: 200px;
+    padding: 20px 10px;
     background-color: #eee;
-    padding: 20px; }
+    box-sizing: border-box; }
+    .cart-screen .cart-action-box span {
+      font-size: 15px;
+      display: block; }
+    .cart-screen .cart-action-box button {
+      width: 100%;
+      outline: none;
+      text-transform: uppercase;
+      border: none;
+      justify-self: end;
+      background-color: #f08000;
+      border-radius: 3px;
+      padding: 10px 0px;
+      opacity: 0.9;
+      margin-top: 20px; }
+    .cart-screen .cart-action-box button:hover {
+      opacity: 1; }
   .cart-screen .cart-item-list {
     padding: 10px;
-    background-color: #eee;
     flex-direction: column !important; }
     .cart-screen .cart-item-list .item-img {
+      border-bottom: 1px solid #eee;
       height: 100px;
-      padding: 10px;
       margin: 10px; }
       .cart-screen .cart-item-list .item-img img {
         max-height: 100%; }
+
+.form-screen {
+  width: auto;
+  height: auto;
+  max-width: 50rem;
+  justify-self: center;
+  justify-items: center;
+  margin: 30px auto;
+  padding: 30px;
+  box-shadow: 0px 0px 3px 3px #343a40; }
 
 .products .row {
   padding: 10px; }

@@ -51,9 +51,9 @@ function CartScreen(props) {
 
               </Col>
               <Col>
-                <h2 className="item-name">
+                <span className="item-name">
                   <Link to={"/products/" + item.product}>{item.name}</Link>
-                </h2>
+                </span>
                 <span className="item status">
                 {item.countInStock > 0 ? "Disponible" : "finished"}
               </span>
@@ -90,7 +90,7 @@ function CartScreen(props) {
               <Col>
                 <div className="item-price">
                   <span>Price</span>
-                  <h1 className="item-price">{item.price}$</h1>
+                  <span className="item-price">{item.price}$</span>
                 </div>
               </Col>
             </Row>
@@ -99,10 +99,10 @@ function CartScreen(props) {
           </Col>
         <Col md={4} className="cart-action-box">
           <div >
-            <h1>Total items : {cartItems.reduce((a, c) => a + c.qty, 0)} item </h1>
-            <h1>
+            <span>Total items : {cartItems.reduce((a, c) => a + c.qty, 0)} item </span>
+            <span>
               Total price: {cartItems.reduce((a, c) => a + c.price * c.qty, 0)} $
-            </h1>
+            </span>
             <button
                 onClick={chickoutHandler}
                 className="button primary full-width"
