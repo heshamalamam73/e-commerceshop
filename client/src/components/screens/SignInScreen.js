@@ -36,7 +36,7 @@ function SignInScreen(props) {
       <Container className='sign'>
         {/* <ChickOutSteps step1></ChickOutSteps> */}
         <Row className="signBox">
-          <Col xs={12} md={4} xl={4}>
+          <Col xs={12}  xl={4}>
             <Form onSubmit={submitHandler} className="form">
               <h2>Log In</h2>
               <hr />

@@ -69,7 +69,7 @@ span {
   min-height: 100vh;
   padding-top: 60px; }
   .body .part1 {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     align-items: flex-start;
     justify-items: flex-start;
@@ -97,7 +97,7 @@ span {
       padding: 20px;
       width: 50%; }
   .body .part2 {
-    min-height: 50vh;
+    min-height: 30vh;
     padding: 0 30px; }
     .body .part2 h1 {
       text-align: center;
@@ -105,7 +105,7 @@ span {
       text-transform: capitalize; }
   .body .part3 {
     text-align: center;
-    min-height: 80vh;
+    min-height: 50vh;
     padding: 20px; }
     .body .part3 h1 {
       padding: 20px 0;
@@ -124,14 +124,17 @@ span {
         align-self: flex-start; }
       .body .part3 .boxes img {
         width: 400px;
-        max-height: 300px; }
+        max-height: 300px;
+        padding-top: 10px; }
   .body .part4 {
-    min-height: 70vh;
+    min-height: 40vh;
     padding-top: 30px;
     max-width: 100%; }
     .body .part4 .slider3 {
       text-align: left;
-      max-width: 100%; }
+      max-width: 100%;
+      height: 400px;
+      padding: 20px 0; }
       .body .part4 .slider3 h2 {
         font-size: 3rem; }
     .body .part4 .slid-box {
@@ -178,24 +181,24 @@ span {
 
 .footer {
   min-height: 350px;
-  padding: 30px;
-  text-align: center;
-  border-top: 2px solid #eee; }
+  border-top: 2px solid #eee;
+  padding: 20px; }
   .footer .row {
     text-align: left;
     text-align: center;
-    padding: 30px;
     justify-content: center;
-    margin: 0 auto; }
+    padding: 20px; }
     .footer .row span {
-      font-size: 20px; }
+      font-size: 20px;
+      padding-top: 10px; }
     .footer .row a {
-      font-size: 20px; }
+      font-size: 20px;
+      padding-top: 10px; }
     .footer .row input,
     .footer .row button {
       display: block;
       width: 100%;
-      margin: 30px; }
+      margin-top: 10px; }
 
 .sign .signBox {
   margin: 20px auto;
@@ -435,8 +438,7 @@ span {
     max-width: 100vw;
     padding: 20px; }
   .header .navTitle a {
-    text-decoration: none;
-    padding: 0; }
+    text-decoration: none; }
   .header .navItems li {
     padding: 10px;
     list-style: none;
