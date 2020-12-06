@@ -33,64 +33,60 @@ function SignInScreen(props) {
 
   return (
 
-
-      <Container className="sign">
-        <motion.div
-            className="thumbnails"
-            initial="initial"
-            animate="enter"
-            exit="exit"
-            variants={{ exit: { transition: { staggerChildren: 0.1 } } }}
-        >
-
+      <Container className='sign'>
         {/* <ChickOutSteps step1></ChickOutSteps> */}
-      <Form onSubmit={submitHandler} className="signBox">
-        <h2>Log In</h2>
-        <hr />
+        <Row className="signBox">
+          <Col xs={12} md={4} xl={4}>
+            <Form onSubmit={submitHandler} className="form">
+              <h2>Log In</h2>
+              <hr />
 
-        {loading && <Alert color="info">Loading....</Alert>}
-        {message && <Alert color="danger">{message}</Alert>}
-        <Form.Group controlId="formHorizontalName">
-          <Form.Label >
-            User Name
-          </Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="User Name "
-            onChange={(e) => setUsername(e.target.value)}
-            value={username}
-          />
-        </Form.Group>
-        <Form.Group controlId="formHorizontalPassword">
-          <Form.Label  >
-            Password
-          </Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Password"
-            onChange={(e) => setPassword(e.target.value)}
-            value={password}
-          />
-        </Form.Group>
+              {loading && <Alert color="info">Loading....</Alert>}
+              {message && <Alert color="danger">{message}</Alert>}
+              <Form.Group controlId="formHorizontalName">
+                <Form.Label >
+                  User Name
+                </Form.Label>
+                <Form.Control
+                    type="text"
+                    placeholder="User Name "
+                    onChange={(e) => setUsername(e.target.value)}
+                    value={username}
+                />
+              </Form.Group>
+              <Form.Group controlId="formHorizontalPassword">
+                <Form.Label  >
+                  Password
+                </Form.Label>
+                <Form.Control
+                    type="password"
+                    placeholder="Password"
+                    onChange={(e) => setPassword(e.target.value)}
+                    value={password}
+                />
+              </Form.Group>
 
-        <Button
+              <Button
 
-          type="submit"
-          onClick={submitHandler}
-        >
-          Log In            </Button>
+                  type="submit"
+                  onClick={submitHandler}
+              >
+                Log In            </Button>
 
 
-        <Link
-          to={
-            redirect === "/" ? "rigester" : "rigester?redirect=" + redirect
-          }
-        >
-          Create New acconut
-            </Link>
+              <Link
+                  to={
+                    redirect === "/" ? "rigester" : "rigester?redirect=" + redirect
+                  }
+              >
+                Create New acconut
+              </Link>
 
-      </Form>
-        </motion.div>
+            </Form>
+
+          </Col>
+        </Row>
+
 
       </Container >
 
