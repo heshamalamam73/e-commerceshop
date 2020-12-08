@@ -42,11 +42,15 @@
   margin-left: 50px; }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+button {
+  color: rgba(12, 12, 13, 0.8); }
+
 #main {
   transition: margin-left .5s; }
 
 .app {
-  min-height: 100vh !important; }
+  min-height: 100vh !important;
+  background-color: #ffffff; }
 
 img {
   max-width: 100%; }
@@ -61,7 +65,7 @@ h5,
 h6,
 li,
 span {
-  color: #111111 !important;
+  color: rgba(12, 12, 13, 0.8) !important;
   text-decoration: none !important; }
 
 .body {

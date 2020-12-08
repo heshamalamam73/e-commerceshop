@@ -4,12 +4,19 @@ import { Card, Col, Row } from "react-bootstrap";
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 import { motion } from "framer-motion";
 import {backVariants , imageVariants, frameVariants, thumbnailVariants , transition} from "./setting";
-
+import {AiFillHeart} from 'react-icons/ai'
 function ProductItem(props) {
+    const { product } = props;
 
+   const  handleAddLiked =(e)=> {
+       e.preventDefault()
+       let liked = JSON.parse(localStorage.getItem("liked")) || [];
+       liked.push(product)
+       localStorage.setItem('liked' , JSON.stringify(liked))
+       console.log(localStorage.getItem("liked"))
 
+    }
 
-  const { product } = props;
 
   return (
     <Col className="campground" xs={12} md={6} lg={4} xl={3}>
@@ -41,7 +48,7 @@ function ProductItem(props) {
                     <option>blue</option>
                 </Input>
                 <button className="button ">Add</button>
-
+                <button  className='button' onClick={handleAddLiked}><AiFillHeart  size='2em'/></button>
             </form>
         </Card.Body>
 

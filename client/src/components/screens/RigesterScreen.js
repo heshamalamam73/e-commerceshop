@@ -36,8 +36,9 @@ function RigesterScreen(props) {
   return (
     <Container className="sign">
       {/* <ChickOutSteps step1></ChickOutSteps> */}
-
-      <Form onSubmit={submitHandler} className="signBox">
+      <Row className="signBox">
+        <Col xs={12}  xl={4}>
+      <Form onSubmit={submitHandler} className="form">
         <h2>Sign Up</h2>
         <hr />
         {loading && <Alert color="info">Loading....</Alert>}
@@ -106,11 +107,13 @@ function RigesterScreen(props) {
               to={redirect === "/" ? "signin" : "signin?redirect=" + redirect}
               className="button full-width"
             >
-              Create New acconut
+              Log in ?
             </Link>
           </Col>
         </Form.Group>
       </Form>
+        </Col>
+      </Row>
     </Container>
   );
 }

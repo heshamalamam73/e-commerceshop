@@ -167,7 +167,15 @@
         margin-left: 50px;
     }
     /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-    
+
+    $color-primary :rgba(12, 12, 13, 0.8);
+    $color-secondary : #737373;
+    button{
+        color : $color-primary;
+        //background-color: #0060df!important;
+
+    }
+
     #main {
         transition: margin-left .5s;
     }
@@ -175,6 +183,8 @@
     .app {
         min-height: 100vh!important;
         //background-color: adjust-hue($color: #000000, $degrees: 0);
+        background-color: #ffffff;
+
     }
     
     img {
@@ -191,7 +201,7 @@
     h6,
     li,
     span {
-        color: #111111!important;
+        color: $color-primary !important;
         text-decoration: none!important;
     }
     

@@ -30,7 +30,15 @@ function SignInScreen(props) {
     e.preventDefault();
     dispatch(signin(username, password));
   };
+const showPassword = (e)=> {
+  const x = document.getElementById("myInput");
+  if (x.type === "password"){
+    x.type ="text"
+  }else{
+    x.type = "password"
+  }
 
+}
   return (
 
       <Container className='sign'>
@@ -63,7 +71,10 @@ function SignInScreen(props) {
                     placeholder="Password"
                     onChange={(e) => setPassword(e.target.value)}
                     value={password}
+                    id="myInput"
                 />
+                <input type="checkbox" onClick={showPassword} / > Show password
+
               </Form.Group>
 
               <Button

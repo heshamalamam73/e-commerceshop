@@ -18,6 +18,7 @@ import { signout } from "./redux/actions/userAction";
 import Products from './components/screens/Products'
 import LeftNav from './components/LeftNav'
 import './css/main.css'
+import Liked from './components/screens/Liked'
 import { AnimatePresence } from "framer-motion";
 
 import HomeScreen from "./components/screens/HomeScreen";
@@ -43,7 +44,7 @@ const App = () => (
                                               <Route path="/payment" component={PaymentScreen} exact={true} />
                                               <Route path="/placeorder" component={PlaceOrder} exact={true} />
                                                <Route path="/cart/:id?" component={CartScreen} />
-
+                                               <Route path="/liked" component={Liked}  exact={true}/>
                     </Switch>
 
 
