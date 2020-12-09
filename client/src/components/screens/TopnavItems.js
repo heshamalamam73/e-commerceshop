@@ -5,8 +5,6 @@ import React from 'react'
 function TopnavItems(props) {
   const { active } = props
   return (
-    <div className={active ? "dropdown-content active" : "dropdown-content"}>
-      {props.item === 1 ? (
         <ul className="ul">
           <li className="top-shild">
             <div class="second-item__title">
@@ -283,102 +281,120 @@ function TopnavItems(props) {
             </ul>
 
           </li>
-        </ul>
-      ) : null}
-      {props.item1 === 2 ? (
-        <ul class="navigation-panel__container__items">
-          <li class="second-item">
-            <div class="second-item__title">
-              <a href="/online/Telefonia-e-Smartphone/Smartphone-e-Cellulari" title="Smartphone e Cellulari">Smartphone e Cellulari</a>
-            </div>
-            <ul class="items">
-              <li class="third-item">
-                <a href="/online/Telefonia-e-Smartphone/Smartphone-e-Cellulari/Smartphone">Smartphone<span class="icon-arrow-right"></span></a>
-              </li>
-              <li class="third-item">
-                <a href="/online/Telefonia-e-Smartphone/Smartphone-e-Cellulari/iPhone">iPhone<span class="icon-arrow-right"></span></a>
-              </li>
-              <li class="third-item">
-                <a href="/online/Telefonia-e-Smartphone/Smartphone-e-Cellulari/Cellulari">Cellulari<span class="icon-arrow-right"></span></a>
-              </li>
-              <li class="third-item">
-                <a href="/online/Telefonia-e-Smartphone/Smartphone-e-Cellulari/Accessori-Cellulari-e-Smartphone">Accessori Cellulari e Smartphone<span class="icon-arrow-right"></span></a>
-              </li>
-            </ul>
-          </li>
-          <li class="second-item">
-            <div class="second-item__title">
-              <a href="/online/Telefonia-e-Smartphone/Wearable" title="Wearable">Wearable</a>
-            </div>
-            <ul class="items">
-              <li class="third-item">
-                <a href="/online/Telefonia-e-Smartphone/Wearable/Smartwatch">Smartwatch<span class="icon-arrow-right"></span></a>
-              </li>
-              <li class="third-item">
-                <a href="/online/Telefonia-e-Smartphone/Wearable/Sportwatch">Sportwatch<span class="icon-arrow-right"></span></a>
-              </li>
-              <li class="third-item">
-                <a href="/online/Telefonia-e-Smartphone/Wearable/Activity-tracker">Activity tracker<span class="icon-arrow-right"></span></a>
-              </li>
-              <li class="third-item">
-                <a href="/online/Telefonia-e-Smartphone/Wearable/Visori-VR">Visori VR<span class="icon-arrow-right"></span></a>
-              </li>
-            </ul>
-          </li>
-          <li class="second-item">
-            <div class="second-item__title">
-              <a href="/online/Telefonia-e-Smartphone/Cordless-e-Telefonia-Fissa" title="Cordless e Telefonia Fissa">Cordless e Telefonia Fissa</a>
-            </div>
-            <ul class="items">
-              <li class="third-item">
-                <a href="/online/Telefonia-e-Smartphone/Cordless-e-Telefonia-Fissa/Telefoni-Fissi">Telefoni Fissi<span class="icon-arrow-right"></span></a>
-              </li>
-              <li class="third-item">
-                <a href="/online/Telefonia-e-Smartphone/Cordless-e-Telefonia-Fissa/Telefoni-Cordless">Telefoni Cordless<span class="icon-arrow-right"></span></a>
-              </li>
-              <li class="third-item">
-                <a href="/online/Telefonia-e-Smartphone/Cordless-e-Telefonia-Fissa/Walkie-Talkie-Ricetrasmittenti">Walkie Talkie / Ricetrasmittenti<span class="icon-arrow-right"></span></a>
-              </li>
-              <li class="third-item">
-                <a href="/online/Telefonia-e-Smartphone/Cordless-e-Telefonia-Fissa/Accessori-cordless">Accessori cordless<span class="icon-arrow-right"></span></a>
-              </li>
-            </ul>
-          </li>
-          <li class="second-item">
-            <div class="second-item__title">
-              <a href="/online/Telefonia-e-Smartphone/Accessori-telefonia" title="Accessori telefonia">Accessori telefonia</a>
-            </div>
-            <ul class="items">
-              <li class="third-item">
-                <a href="/online/Telefonia-e-Smartphone/Accessori-telefonia/Caricabatterie">Caricabatterie<span class="icon-arrow-right"></span></a>
-              </li>
-              <li class="third-item">
-                <a href="/online/Telefonia-e-Smartphone/Accessori-telefonia/Powerbank">Powerbank<span class="icon-arrow-right"></span></a>
-              </li>
-              <li class="third-item">
-                <a href="/online/Telefonia-e-Smartphone/Accessori-telefonia/Custodie-cellulari">Custodie cellulari<span class="icon-arrow-right"></span></a>
-              </li>
-              <li class="third-item">
-                <a href="/online/Telefonia-e-Smartphone/Accessori-telefonia/Protezione">Protezione<span class="icon-arrow-right"></span></a>
-              </li>
-              <li class="third-item">
-                <a href="/online/Telefonia-e-Smartphone/Accessori-telefonia/Bluetooth">Bluetooth<span class="icon-arrow-right"></span></a>
-              </li>
-              <li class="third-item">
-                <a href="/online/Telefonia-e-Smartphone/Accessori-telefonia/Cuffie-e-Auricolari">Cuffie e Auricolari<span class="icon-arrow-right"></span></a>
-              </li>
-              <li class="third-item">
-                <a href="/online/Telefonia-e-Smartphone/Accessori-telefonia/Memorie">Memorie<span class="icon-arrow-right"></span></a>
-              </li>
-              <li class="third-item">
-                <a href="/online/Telefonia-e-Smartphone/Accessori-telefonia/Altri-accessori-telefonia">Altri accessori telefonia<span class="icon-arrow-right"></span></a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      ) : null}
+            <li className="second-item">
+              <div className="second-item__title">
+                <a href="/online/Telefonia-e-Smartphone/Smartphone-e-Cellulari" title="Smartphone e Cellulari">Smartphone
+                  e Cellulari</a>
+              </div>
+              <ul className="items">
+                <li className="third-item">
+                  <a href="/online/Telefonia-e-Smartphone/Smartphone-e-Cellulari/Smartphone">Smartphone<span
+                      className="icon-arrow-right"></span></a>
+                </li>
+                <li className="third-item">
+                  <a href="/online/Telefonia-e-Smartphone/Smartphone-e-Cellulari/iPhone">iPhone<span
+                      className="icon-arrow-right"></span></a>
+                </li>
+                <li className="third-item">
+                  <a href="/online/Telefonia-e-Smartphone/Smartphone-e-Cellulari/Cellulari">Cellulari<span
+                      className="icon-arrow-right"></span></a>
+                </li>
+                <li className="third-item">
+                  <a href="/online/Telefonia-e-Smartphone/Smartphone-e-Cellulari/Accessori-Cellulari-e-Smartphone">Accessori
+                    Cellulari e Smartphone<span className="icon-arrow-right"></span></a>
+                </li>
+              </ul>
+            </li>
+            <li className="second-item">
+              <div className="second-item__title">
+                <a href="/online/Telefonia-e-Smartphone/Wearable" title="Wearable">Wearable</a>
+              </div>
+              <ul className="items">
+                <li className="third-item">
+                  <a href="/online/Telefonia-e-Smartphone/Wearable/Smartwatch">Smartwatch<span
+                      className="icon-arrow-right"></span></a>
+                </li>
+                <li className="third-item">
+                  <a href="/online/Telefonia-e-Smartphone/Wearable/Sportwatch">Sportwatch<span
+                      className="icon-arrow-right"></span></a>
+                </li>
+                <li className="third-item">
+                  <a href="/online/Telefonia-e-Smartphone/Wearable/Activity-tracker">Activity tracker<span
+                      className="icon-arrow-right"></span></a>
+                </li>
+                <li className="third-item">
+                  <a href="/online/Telefonia-e-Smartphone/Wearable/Visori-VR">Visori VR<span
+                      className="icon-arrow-right"></span></a>
+                </li>
+              </ul>
+            </li>
+            <li className="second-item">
+              <div className="second-item__title">
+                <a href="/online/Telefonia-e-Smartphone/Cordless-e-Telefonia-Fissa" title="Cordless e Telefonia Fissa">Cordless
+                  e Telefonia Fissa</a>
+              </div>
+              <ul className="items">
+                <li className="third-item">
+                  <a href="/online/Telefonia-e-Smartphone/Cordless-e-Telefonia-Fissa/Telefoni-Fissi">Telefoni Fissi<span
+                      className="icon-arrow-right"></span></a>
+                </li>
+                <li className="third-item">
+                  <a href="/online/Telefonia-e-Smartphone/Cordless-e-Telefonia-Fissa/Telefoni-Cordless">Telefoni
+                    Cordless<span className="icon-arrow-right"></span></a>
+                </li>
+                <li className="third-item">
+                  <a href="/online/Telefonia-e-Smartphone/Cordless-e-Telefonia-Fissa/Walkie-Talkie-Ricetrasmittenti">Walkie
+                    Talkie / Ricetrasmittenti<span className="icon-arrow-right"></span></a>
+                </li>
+                <li className="third-item">
+                  <a href="/online/Telefonia-e-Smartphone/Cordless-e-Telefonia-Fissa/Accessori-cordless">Accessori
+                    cordless<span className="icon-arrow-right"></span></a>
+                </li>
+              </ul>
+            </li>
+            <li className="second-item">
+              <div className="second-item__title">
+                <a href="/online/Telefonia-e-Smartphone/Accessori-telefonia" title="Accessori telefonia">Accessori
+                  telefonia</a>
+              </div>
+              <ul className="items">
+                <li className="third-item">
+                  <a href="/online/Telefonia-e-Smartphone/Accessori-telefonia/Caricabatterie">Caricabatterie<span
+                      className="icon-arrow-right"></span></a>
+                </li>
+                <li className="third-item">
+                  <a href="/online/Telefonia-e-Smartphone/Accessori-telefonia/Powerbank">Powerbank<span
+                      className="icon-arrow-right"></span></a>
+                </li>
+                <li className="third-item">
+                  <a href="/online/Telefonia-e-Smartphone/Accessori-telefonia/Custodie-cellulari">Custodie
+                    cellulari<span className="icon-arrow-right"></span></a>
+                </li>
+                <li className="third-item">
+                  <a href="/online/Telefonia-e-Smartphone/Accessori-telefonia/Protezione">Protezione<span
+                      className="icon-arrow-right"></span></a>
+                </li>
+                <li className="third-item">
+                  <a href="/online/Telefonia-e-Smartphone/Accessori-telefonia/Bluetooth">Bluetooth<span
+                      className="icon-arrow-right"></span></a>
+                </li>
+                <li className="third-item">
+                  <a href="/online/Telefonia-e-Smartphone/Accessori-telefonia/Cuffie-e-Auricolari">Cuffie e
+                    Auricolari<span className="icon-arrow-right"></span></a>
+                </li>
+                <li className="third-item">
+                  <a href="/online/Telefonia-e-Smartphone/Accessori-telefonia/Memorie">Memorie<span
+                      className="icon-arrow-right"></span></a>
+                </li>
+                <li className="third-item">
+                  <a href="/online/Telefonia-e-Smartphone/Accessori-telefonia/Altri-accessori-telefonia">Altri accessori
+                    telefonia<span className="icon-arrow-right"></span></a>
+                </li>
+              </ul>
+            </li>
 
-    </div>
+        </ul>
+
 
   )
 

@@ -19,14 +19,6 @@ import Topnav from "./screens/Topnav";
 
 function Header(props) {
   const dispatch = useDispatch();
-  const [show, setShow] = useState(true)
-
-  const handleopen = () => {
-    setShow(!show)
-    const nav = document.getElementById("mySidenav")
-    show ? nav.style.width = "300px" : nav.style.width = "0px"
-
-  }
 
 
   // const [isOpen, setIsOpen] = useState(false);
@@ -50,13 +42,11 @@ function Header(props) {
       <ul className="navItems">
         <li><Link to='/signin'> <AiOutlineUser /></Link></li>
         <li><Link to='/liked'><AiFillHeart /></Link></li>
-
         <li><Link to='/cart'><AiOutlineShoppingCart /></Link></li>
-
-        <li>
-          <a href="#">           <BsJustify onClick={handleopen} />
-          </a>
-        </li>
+        {/*<li>*/}
+        {/*  <a href="#">           <BsJustify onClick={handleopen} />*/}
+        {/*  </a>*/}
+        {/*</li>*/}
       </ul>
     </section>
   );

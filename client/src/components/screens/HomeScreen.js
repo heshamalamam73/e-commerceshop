@@ -22,9 +22,6 @@ import ContainerBox from "./Contaier";
 function HomeScreen(props) {
   return (
       <section className='body'>
-
-
-
       <div className="part1">
         <div className='text-left'>
           <h1>
@@ -33,7 +30,7 @@ function HomeScreen(props) {
           <p>
             Più di 10mila prodotti
                       </p>
-          <Link to='/allproducts'> Acquistare ora </Link>
+          <Link to='/online'> Acquistare ora </Link>
 
         </div>
         <div className="img">

@@ -4,9 +4,11 @@ import { listProducts } from "../../redux/actions/productActions";
 import { Spinner } from "reactstrap";
 import ProductItem from "./ProductItem";
 import { Container, Row } from "reactstrap";
+import {Breadcrumb} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import LeftNav from "../LeftNav";
 
 function Products(props) {
 
@@ -25,38 +27,42 @@ function Products(props) {
     };
   }, []);
 
-  return loading ? (
-    <div className="spinner">
-      <Spinner style={{ width: "3rem", height: "3rem" }} />
-    </div>
-  ) : error ? (
-    <div>Error...</div>
-  ) : (
+  return(
+      <div >
+          <Breadcrumb>
+              <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
 
-      <Container className="products">
+              <Breadcrumb.Item active>Online</Breadcrumb.Item>
+          </Breadcrumb>
+          <div className="products">
+              <div >
+                  <LeftNav />
+              </div>
+              <div>
+                  {
+                      loading ? (
+                          <div className="spinner">
+                              <Spinner style={{ width: "3rem", height: "3rem" }} />
+                          </div>
+                      ) : error ? (
+                          <div>Error...</div>
+                      ) : (
 
-          <Row>
-            {products &&
-              products.map((product) => (
+                          <Row>
+                              {products &&
+                              products.map((product) => (
 
-                  <ProductItem product={product} id={product._id} onClick={() => setSelectedId(product._id)} />
-                       ))}    
-
-
-
-
-
-
-
+                                  <ProductItem product={product} id={product._id} onClick={() => setSelectedId(product._id)} />
+                              ))}
+                          </Row>
+                      )
+                  }
+              </div>
+          </div>
 
 
+      </div>
 
-
-
-          </Row>
-
-      </Container>
-
-  );
+)
 }
 export default Products;

@@ -1,12 +1,11 @@
 .sidenav {
-  box-shadow: 3px 3px #eee, -1em 0 0.4em #eee;
   height: 100%;
   /* 100% Full-height */
-  width: 0;
+  width: 210px;
+  position: relative;
+  z-index: 2222;
   /* 0 width - change this with JavaScript */
-  position: fixed;
   /* Stay in place */
-  z-index: 1000000;
   /* Stay on top */
   top: 0;
   /* Stay at the top */
@@ -15,33 +14,19 @@
   background: white;
   overflow-x: hidden;
   /* Disable horizontal scroll */
-  padding-top: 60px;
   /* Place content 60px from the top */
   transition: 0.5s;
   /* 0.5 second transition effect to slide in the sidenav */ }
+  .sidenav ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: left; }
+    .sidenav ul li .second-item__title a {
+      font-weight: bold; }
 
 /* The navigation menu links */
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s; }
-
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1; }
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px; }
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 button {
   color: rgba(12, 12, 13, 0.8); }
 
@@ -264,25 +249,29 @@ span {
   padding: 30px;
   box-shadow: 0px 0px 3px 3px #343a40; }
 
-.products .row {
-  padding: 10px; }
-  .products .row .col-lg-4 {
+.products {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; }
+  .products .row {
     padding: 10px; }
-    .products .row .col-lg-4 span {
-      display: block; }
-    .products .row .col-lg-4 .productForm {
-      padding: 10px;
-      display: flex;
-      text-align: center;
-      margin: 0 auto;
-      justify-content: center; }
-      .products .row .col-lg-4 .productForm button {
-        padding: 0px 20px;
-        border: 1px solid #818181;
-        background-color: white; }
-      .products .row .col-lg-4 .productForm .input {
-        font-size: 6px;
-        height: 30px; }
+    .products .row .col-lg-4 {
+      padding: 10px; }
+      .products .row .col-lg-4 span {
+        display: block; }
+      .products .row .col-lg-4 .productForm {
+        padding: 10px;
+        display: flex;
+        text-align: center;
+        margin: 0 auto;
+        justify-content: center; }
+        .products .row .col-lg-4 .productForm button {
+          padding: 0px 20px;
+          border: 1px solid #818181;
+          background-color: white; }
+        .products .row .col-lg-4 .productForm .input {
+          font-size: 6px;
+          height: 30px; }
 
 .spinner {
   position: relative;
@@ -450,10 +439,6 @@ span {
     .header .navItems li a {
       text-decoration: none;
       font-size: 2rem; }
-  .sidenav {
-    padding-top: 15px; }
-  .sidenav a {
-    font-size: 18px; }
   .body .part1 .text-left h1 {
     font-size: 3rem; }
   .body .part1 .text-left p {
@@ -468,7 +453,8 @@ span {
     .products .row .col-xs-12 {
       flex-direction: row !important;
       flex-wrap: wrap;
-      display: flex; }
+      display: flex;
+      box-shadow: .3px .4px 1px 2px white; }
   footer {
     padding: 20px;
     text-align: center;

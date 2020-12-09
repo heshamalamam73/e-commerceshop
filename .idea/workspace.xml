@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9e895d4b-299f-4792-bbe0-7beec03269a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/screens/Liked.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/screens/CommingSoon.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/screens/ProductItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/screens/ProductItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/screens/RigesterScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/screens/RigesterScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/screens/SignInScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/screens/SignInScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/screens/shippingScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/screens/shippingScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/LeftNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LeftNav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/screens/HomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/screens/ProductScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/screens/ProductScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/screens/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/screens/Products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/screens/TopnavItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/screens/TopnavItems.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scss/main.scss" afterDir="false" />
     </list>
@@ -97,6 +102,8 @@
       <workItem from="1607188504827" duration="24418000" />
       <workItem from="1607276214691" duration="789000" />
       <workItem from="1607372683870" duration="9351000" />
+      <workItem from="1607465183899" duration="1026000" />
+      <workItem from="1607530435704" duration="9924000" />
     </task>
     <servers />
   </component>
