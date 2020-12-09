@@ -49,19 +49,19 @@ export default class Carousel2 extends Component {
       <Container className="slider">
         <Slider {...settings}>
           <div>
-            <img src={img1} />
+            <img src="https://images.pexels.com/photos/3944405/pexels-photo-3944405.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
           </div>
           <div>
-            <img src={img2} />
+            <img src="https://images.pexels.com/photos/3946005/pexels-photo-3946005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
           </div>
           <div>
-            <img src={img3} />
+            <img src="https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
           </div>
           <div>
-            <img src={img4} />
+            <img src="https://images.pexels.com/photos/5083217/pexels-photo-5083217.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
           </div>
           <div>
-            <img src={img5} />
+            <img src="https://images.pexels.com/photos/393047/pexels-photo-393047.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
           </div>
 
         </Slider>

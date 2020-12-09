@@ -34,7 +34,7 @@ function HomeScreen(props) {
 
         </div>
         <div className="img">
-          <img src="https://images.pexels.com/photos/4164088/pexels-photo-4164088.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+          <img src="https://images.pexels.com/photos/3944405/pexels-photo-3944405.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
         </div>
 
       </div>
@@ -43,22 +43,27 @@ function HomeScreen(props) {
       </div>
       <div className="part3">
         <h1>prodotti Categories</h1>
-        <div className="boxes">
-          <div className="box1">
-            <img src="https://images.pexels.com/photos/3921045/pexels-photo-3921045.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
-          </div>
-          <div className="box2">
-            <img src="https://images.pexels.com/photos/3989394/pexels-photo-3989394.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
-          </div>
-          <div className="box3">
-            <img src="https://images.pexels.com/photos/2697787/pexels-photo-2697787.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
-          </div>
-          <div className="part4">
-            <Carousel3 />
-          </div>
+        <Row className="boxes">
+          <Col xs={12}  xl={4} className="box1">
+            <img src="https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+            <p>Prova un caricamento ultra rapido con un'unità SSD ad altissima velocità, un coinvolgimento ancora maggiore grazie al supporto per il feedback aptico, ai grilletti adattivi e all'audio 3D e scopri una nuova generazione di incredibili giochi PlayStation®. </p>
+
+          </Col>
+          <Col xs={12}  xl={4} className="box1">
+            <img src="https://images.pexels.com/photos/3394665/pexels-photo-3394665.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+            <p>For over 60 years, JBL has engineered the precise, impressive sound found in big venues around the world. These headphones reproduce that same JBL sound, punching out bass that’s both deep and powerful.</p>
+          </Col>
+        <Col xs={12}  xl={4} className="box1">
+            <img src="https://images.pexels.com/photos/3945671/pexels-photo-3945671.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+            <p>allcaca RC Mini Drone con Telecamera 4K HD Doppia, RC Quadcopter Drone Pieghevole WiFi FPV Drone, Un Pulsante di Decollo / Atterraggio, Modalità Senza Testa 3D Flip, per Bambini e Principianti Regalo</p>
+
+          </Col>
+
+        </Row>
+
+        <div className="part4">
+          <Carousel3 />
         </div>
-
-
 
       </div>
 

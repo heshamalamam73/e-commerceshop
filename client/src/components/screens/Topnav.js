@@ -11,17 +11,11 @@ function Topnav() {
 
   return (
     <ul className='top-nav'>
-      <li> <Link to="/allproducts"> All Products</Link></li>
-      <li className="dropdown" onClick={handleChangeItem(this, 1)}>
-
+      <li> <Link to="/online"> All Products</Link></li>
+      <li >
         <a href="#" > Informatica</a>
-        <TopnavItems item={item} active={active} />
       </li>
-
-      <li onClick={handleChangeItem(this, 2)}> <a href="#"> Telefonia</a>
-        <TopnavItems item={item} active={active} />
-
-
+      <li > <a href="#"> Telefonia</a>
       </li>
       <li> <a href="#"> TV e Home Cinema</a></li>
       <li> <a href="#"> Audio e Hi-Fi</a></li>
@@ -29,7 +23,6 @@ function Topnav() {
       <li> <a href="#"> Elettrodomestici</a></li>
       <li> <a href="#"> Console e Videogiochi</a></li>
       <li> <a href="#"> Tempo Libero</a></li>
-
 
     </ul>
 

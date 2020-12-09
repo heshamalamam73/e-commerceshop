@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import LeftNav from "../LeftNav";
+import Topnav from "./Topnav";
 
 function Products(props) {
 
@@ -34,6 +35,7 @@ function Products(props) {
 
               <Breadcrumb.Item active>Online</Breadcrumb.Item>
           </Breadcrumb>
+          <Topnav/>
           <div className="products">
               <div >
                   <LeftNav />
