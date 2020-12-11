@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
@@ -117,5 +118,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+=======
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="terminal" />
+>>>>>>> 783964a (lenovo ver)
   </component>
 </project>
