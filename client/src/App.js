@@ -45,8 +45,6 @@ const App = () => (
                     <Route path="/cart/:id?" component={CartScreen}/>
                     <Route path="/liked" component={Liked} exact={true}/>
                 </Switch>
-
-
             </section>
             <Footer/>
         </div>
