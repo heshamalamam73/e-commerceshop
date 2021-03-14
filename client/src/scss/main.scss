@@ -1,123 +1,123 @@
-    // #app {
-    //     transition: margin-left .5s;
-    // }
-    // .slider {
-    //     img {
-    //         width: 100%;
-    //     }
-    // }
-    // .slider2 {
-    //     height: 300px;
-    //     padding: 30px;
-    //     .slid-box {
-    //         img {
-    //             max-height: 260px;
-    //             width: 100%;
-    //             padding: 20px;
-    //             height: 260px;
-    //         }
-    //     }
-    // }
-    // .content-container {
-    //     .col {
-    //         padding: 20px;
-    //         img {
-    //             border-radius: 30px;
-    //         }
-    //     }
-    // }
-    // .slider3 {
-    //     height: auto;
-    //     padding: 20px;
-    //     .slid-box {
-    //         box-shadow: 3px 3px red, -1em 0 0.4em #3f3f3f;
-    //         background-color: white;
-    //         border: 1px solid #eee;
-    //         padding: 0 20px;
-    //         min-height: 300px;
-    //         img {
-    //             max-height: 200px;
-    //             width: 150px;
-    //         }
-    //     }
-    // }
-    // .blackfriday {
-    //     text-align: center;
-    //     padding: 10px;
-    //     color: #f1f1f1;
-    //     a,
-    //     button {
-    //         color: #f1f1f1;
-    //         border: 1px solid #eee;
-    //         padding: 10px 30px;
-    //     }
-    //     a,
-    //     button:hover {
-    //         color: #f1f1f1;
-    //         background-color: #3f3f3f;
-    //     }
-    //     img {
-    //         width: 100%;
-    //         padding-bottom: 20px;
-    //     }
-    // }
-    // .prefooter {
-    //     text-align: center;
-    //     padding: 40px;
-    //     color: #f1f1f1;
-    //     h2 {
-    //         padding: 20px;
-    //     }
-    //     p {
-    //         font-weight: 800;
-    //         padding: 10px;
-    //     }
-    //     .col-md-4 {
-    //         padding: 20px;
-    //         text-align: left;
-    //         h1 {
-    //             font-size: 40px;
-    //         }
-    //     }
-    // }
-    // .footer {
-    //     padding: 20px;
-    //     min-height: 300px;
-    //     background-color: #343a40;
-    //     .row {
-    //         color: white;
-    //         text-align: left;
-    //         padding: 30px;
-    //         .col-md-4 {
-    //             padding: 10px;
-    //         }
-    //         input {
-    //             display: block;
-    //             width: 100%;
-    //             padding: 0px 10px;
-    //             margin-top: 10px;
-    //         }
-    //         button {
-    //             padding: 3px 80px;
-    //             margin: 10px;
-    //         }
-    //     }
-    //     p {
-    //         color: white;
-    //         text-align: center;
-    //         align-items: flex-end;
-    //         display: flex;
-    //         justify-content: center;
-    //     }
-    //     .social {
-    //         text-align: center;
-    //         a {
-    //             font-size: 30px;
-    //             color: #eee;
-    //             text-decoration: none;
-    //         }
-    //     }
-    // }
+    #app {
+        transition: margin-left .5s;
+    }
+    .slider {
+        img {
+            width: 100%;
+        }
+    }
+    .slider2 {
+        height: 300px;
+        padding: 30px;
+        .slid-box {
+            img {
+                max-height: 260px;
+                width: 100%;
+                padding: 20px;
+                height: 260px;
+            }
+        }
+    }
+    .content-container {
+        .col {
+            padding: 20px;
+            img {
+                border-radius: 30px;
+            }
+        }
+    }
+    .slider3 {
+        height: auto;
+        padding: 20px;
+        .slid-box {
+            box-shadow: 3px 3px red, -1em 0 0.4em #3f3f3f;
+            background-color: white;
+            border: 1px solid #eee;
+            padding: 0 20px;
+            min-height: 300px;
+            img {
+                max-height: 200px;
+                width: 150px;
+            }
+        }
+    }
+    .blackfriday {
+        text-align: center;
+        padding: 10px;
+        color: #f1f1f1;
+        a,
+        button {
+            color: #f1f1f1;
+            border: 1px solid #eee;
+            padding: 10px 30px;
+        }
+        a,
+        button:hover {
+            color: #f1f1f1;
+            background-color: #3f3f3f;
+        }
+        img {
+            width: 100%;
+            padding-bottom: 20px;
+        }
+    }
+    .prefooter {
+        text-align: center;
+        padding: 40px;
+        color: #f1f1f1;
+        h2 {
+            padding: 20px;
+        }
+        p {
+            font-weight: 800;
+            padding: 10px;
+        }
+        .col-md-4 {
+            padding: 20px;
+            text-align: left;
+            h1 {
+                font-size: 40px;
+            }
+        }
+    }
+    .footer {
+        padding: 20px;
+        min-height: 300px;
+        background-color: #343a40;
+        .row {
+            color: white;
+            text-align: left;
+            padding: 30px;
+            .col-md-4 {
+                padding: 10px;
+            }
+            input {
+                display: block;
+                width: 100%;
+                padding: 0px 10px;
+                margin-top: 10px;
+            }
+            button {
+                padding: 3px 80px;
+                margin: 10px;
+            }
+        }
+        p {
+            color: white;
+            text-align: center;
+            align-items: flex-end;
+            display: flex;
+            justify-content: center;
+        }
+        .social {
+            text-align: center;
+            a {
+                font-size: 30px;
+                color: #eee;
+                text-decoration: none;
+            }
+        }
+    }
     // // left navbar style 
     .sidenav {
         height: 100%;
@@ -173,7 +173,7 @@
     .app {
         color: aliceblue;
         min-height: 100vh!important;
-        background-color: adjust-hue($color: #000000, $degrees: 0);
+        // background-color: adjust-hue($color: #000000, $degrees: 0);
     }
     
     img {

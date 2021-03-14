@@ -1,3 +1,99 @@
+#app {
+  transition: margin-left .5s; }
+
+.slider img {
+  width: 100%; }
+
+.slider2 {
+  height: 300px;
+  padding: 30px; }
+  .slider2 .slid-box img {
+    max-height: 260px;
+    width: 100%;
+    padding: 20px;
+    height: 260px; }
+
+.content-container .col {
+  padding: 20px; }
+  .content-container .col img {
+    border-radius: 30px; }
+
+.slider3 {
+  height: auto;
+  padding: 20px; }
+  .slider3 .slid-box {
+    box-shadow: 3px 3px red, -1em 0 0.4em #3f3f3f;
+    background-color: white;
+    border: 1px solid #eee;
+    padding: 0 20px;
+    min-height: 300px; }
+    .slider3 .slid-box img {
+      max-height: 200px;
+      width: 150px; }
+
+.blackfriday {
+  text-align: center;
+  padding: 10px;
+  color: #f1f1f1; }
+  .blackfriday a,
+  .blackfriday button {
+    color: #f1f1f1;
+    border: 1px solid #eee;
+    padding: 10px 30px; }
+  .blackfriday a,
+  .blackfriday button:hover {
+    color: #f1f1f1;
+    background-color: #3f3f3f; }
+  .blackfriday img {
+    width: 100%;
+    padding-bottom: 20px; }
+
+.prefooter {
+  text-align: center;
+  padding: 40px;
+  color: #f1f1f1; }
+  .prefooter h2 {
+    padding: 20px; }
+  .prefooter p {
+    font-weight: 800;
+    padding: 10px; }
+  .prefooter .col-md-4 {
+    padding: 20px;
+    text-align: left; }
+    .prefooter .col-md-4 h1 {
+      font-size: 40px; }
+
+.footer {
+  padding: 20px;
+  min-height: 300px;
+  background-color: #343a40; }
+  .footer .row {
+    color: white;
+    text-align: left;
+    padding: 30px; }
+    .footer .row .col-md-4 {
+      padding: 10px; }
+    .footer .row input {
+      display: block;
+      width: 100%;
+      padding: 0px 10px;
+      margin-top: 10px; }
+    .footer .row button {
+      padding: 3px 80px;
+      margin: 10px; }
+  .footer p {
+    color: white;
+    text-align: center;
+    align-items: flex-end;
+    display: flex;
+    justify-content: center; }
+  .footer .social {
+    text-align: center; }
+    .footer .social a {
+      font-size: 30px;
+      color: #eee;
+      text-decoration: none; }
+
 .sidenav {
   height: 100%;
   /* 100% Full-height */
@@ -46,8 +142,7 @@
 
 .app {
   color: aliceblue;
-  min-height: 100vh !important;
-  background-color: black; }
+  min-height: 100vh !important; }
 
 img {
   max-width: 100%; }
