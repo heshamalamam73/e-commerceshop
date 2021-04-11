@@ -10,8 +10,20 @@ const getToken = (user) => {
     },
     config.JWT_SECRET_KEY,
     {
-      expiresIn: "48h",
+      expiresIn: "15s",
     }
+  );
+};
+const getRefreshToken = (user) => {
+  return jwt.sign(
+    {
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      isAdmin: user.isAdmin,
+    },
+    config.JWT_SECRET_KEY,
+    { expiresIn: "5m" }
   );
 };
 
@@ -38,4 +50,4 @@ const isAdmin = (req, res, next) => {
   return res.status(401).send({ msg: "Admin Token is not valid" });
 };
 
-export { getToken, isAdmin, isAuth };
+export { getToken, isAdmin, isAuth, getRefreshToken };

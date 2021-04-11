@@ -26,6 +26,7 @@
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
+    "lerna": "^4.0.0",
     "nodemon": "^2.0.6"
   },
   "scripts": {
@@ -35,7 +36,7 @@
     "heroku-postbuild": "npm run install-client && npm run build",
     "start": "node server.js",
     "client": "cd client && npm start",
-    "sass":"cd client && npm run sass",
+    "sass": "cd client && npm run sass",
     "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon server.js\" \"npm run client\" \"npm run sass\""
   },
   "repository": {

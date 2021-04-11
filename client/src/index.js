@@ -10,6 +10,11 @@ import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { setAutorizationToken, currentuser } from "./redux/actions/userAction";
 import jwtDecode from "jwt-decode";
+import axios from "axios";
+
+// axios.interceptors.request.use((req) => {
+//   console.log(req);
+// });
 
 if (localStorage.jwtToken) {
   setAutorizationToken(localStorage.jwtToken);
